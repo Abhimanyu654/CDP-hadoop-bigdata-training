@@ -1,0 +1,93 @@
+site_name: CDP & Hadoop Big Data Training
+site_description: Architecture, components, dependencies, operations, and interview preparation for CDP and Hadoop.
+site_author: Abhimanyu Kumar
+repo_url: https://github.com/Abhimanyu654/hadoop-bigdata-training
+repo_name: Abhimanyu654/hadoop-bigdata-training
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+nav:
+  - Home: index.md
+  - Roadmap: 00-learning-roadmap.md
+  - Dependencies: 00-service-dependency-map.md
+  - HDFS:
+      - Overview: 01-hdfs/index.md
+      - Architecture: 01-hdfs/hdfs-architecture.md
+      - NameNode: 01-hdfs/namenode.md
+      - DataNode: 01-hdfs/datanode.md
+      - Read flow: 01-hdfs/hdfs-read-architecture.md
+      - Write flow: 01-hdfs/hdfs-write-architecture.md
+      - FSImage and EditLog: 01-hdfs/fsimage-editlog.md
+      - JournalNodes: 01-hdfs/journalnodes.md
+      - HA and ZooKeeper: 01-hdfs/hdfs-ha-and-zookeeper.md
+  - YARN:
+      - Overview: 02-yarn/index.md
+      - ResourceManager: 02-yarn/resource-manager.md
+      - NodeManager: 02-yarn/node-manager.md
+      - ApplicationMaster and Containers: 02-yarn/application-master-container.md
+  - MapReduce and JobHistory:
+      - Overview: 03-mapreduce-jobhistory/index.md
+      - Map, Shuffle, Reduce: 03-mapreduce-jobhistory/map-shuffle-reduce.md
+      - JobHistory Server: 03-mapreduce-jobhistory/jobhistory-server.md
+  - Spark:
+      - Overview: 04-spark/index.md
+      - Driver and Executors: 04-spark/driver-executors.md
+      - DAG, Stages, Tasks: 04-spark/dag-stages-tasks.md
+  - Spark on YARN:
+      - Overview: 05-spark-on-yarn/index.md
+      - Client vs Cluster: 05-spark-on-yarn/client-vs-cluster-mode.md
+      - Spark History Server: 05-spark-on-yarn/spark-history-server.md
+  - Hive:
+      - Overview: 06-hive/index.md
+      - HiveServer2: 06-hive/hiveserver2.md
+      - Hive Metastore: 06-hive/hive-metastore.md
+      - Managed vs External: 06-hive/managed-external-tables.md
+  - Tez:
+      - Overview: 07-tez/index.md
+      - DAG and AM: 07-tez/tez-dag-am.md
+  - Impala:
+      - Overview: 08-impala/index.md
+      - impalad: 08-impala/impalad.md
+      - Catalog Service: 08-impala/catalogd.md
+      - StateStore: 08-impala/statestored.md
+  - Kerberos: 09-kerberos/index.md
+  - Ranger, KMS, RMS:
+      - Overview: 10-ranger-kms-rms/index.md
+      - Ranger Admin and Plugins: 10-ranger-kms-rms/ranger-admin-plugin.md
+      - Ranger KMS: 10-ranger-kms-rms/ranger-kms.md
+      - Ranger RMS: 10-ranger-kms-rms/ranger-rms.md
+  - Atlas:
+      - Overview: 11-atlas/index.md
+      - Metadata and Lineage: 11-atlas/metadata-lineage-classification.md
+  - ZooKeeper:
+      - Overview: 12-zookeeper/index.md
+      - Quorum and Failures: 12-zookeeper/quorum-and-failures.md
+  - Kafka:
+      - Overview: 13-kafka/index.md
+      - Broker, Partitions, ISR: 13-kafka/broker-topic-partition-isr.md
+      - ZooKeeper vs KRaft: 13-kafka/zookeeper-vs-kraft.md
+  - Production troubleshooting:
+      - Overview: 14-production-troubleshooting/index.md
+      - Runbook template: 14-production-troubleshooting/runbook-template.md
+  - Supporting services: 15-supporting-services/index.md
+  - References: references.md
+  - Lesson template: 99-lesson-template.md
+  - Publish website: 98-publish-website.md
+  - Training business: 97-training-business.md

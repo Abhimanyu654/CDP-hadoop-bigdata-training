@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.keytab
+*.jks
+*.p12
+*.pem
+*.key
+.env
+.env.*
+secrets/
+credentials/
