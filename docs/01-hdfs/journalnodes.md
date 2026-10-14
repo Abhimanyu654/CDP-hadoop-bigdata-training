@@ -12,3 +12,5 @@ In the common Quorum Journal Manager (QJM) HA design, JournalNodes hold the shar
 - One of three JNs down: two remain, so quorum usually remains.
 - Two of three JNs down: quorum is lost; Active may be unable to commit namespace edits safely.
 - JournalNodes are not DataNodes and do not store user HDFS blocks.
+
+  ## **Table**
