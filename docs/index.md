@@ -28,3 +28,20 @@ For each component, be able to answer: What does it do? Where does it run? What 
 
 ## Version caveat
 This is a learning guide, not a substitute for Cloudera's support matrix or operational runbooks. Dependencies differ by release, deployment type, and enabled features.
+
+
+                 YOUR LEARNING WEBSITE
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+          Big Data                DevOps
+              │                     │
+       Hadoop / Spark          AWS / K8s
+       Kafka / Hive            Terraform
+       Kerberos                CI/CD
+              │                     │
+              └──────────┬──────────┘
+                         │
+                    Free Learning
+                         │
+                  Future Premium
