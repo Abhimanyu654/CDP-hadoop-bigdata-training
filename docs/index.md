@@ -1,9 +1,4 @@
 
-at the end.
-
-The content below is the **actual file content**.
-
-:::writing{variant="document" id="61542" title="New Professional Academy Homepage — docs/index.md"}
 <div class="academy-hero">
 
 <div class="academy-eyebrow">ABHIMANYU'S TECH ACADEMY</div>
