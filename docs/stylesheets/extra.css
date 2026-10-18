@@ -1,353 +1,1031 @@
 /* =========================================================
-   Abhimanyu's Tech Academy
-   Custom MkDocs Material Theme
+   ABHIMANYU'S TECH ACADEMY
+   Professional Academy Landing Page
    ========================================================= */
 
-/* ---------- Global typography ---------- */
+/* ---------------------------------------------------------
+   1. DESIGN TOKENS
+   --------------------------------------------------------- */
 
 :root {
-  --academy-primary: #2563eb;
-  --academy-primary-dark: #1d4ed8;
-  --academy-accent: #06b6d4;
-  --academy-dark: #0f172a;
-  --academy-text: #1e293b;
-  --academy-muted: #64748b;
-  --academy-border: #e2e8f0;
-  --academy-surface: #f8fafc;
+  --academy-navy: #07152f;
+  --academy-navy-2: #0b1f45;
+  --academy-blue: #1455d9;
+  --academy-blue-light: #2563eb;
+  --academy-cyan: #16c7ff;
+
+  --academy-text: #111b35;
+  --academy-muted: #66748f;
+  --academy-border: #dce5f3;
+  --academy-surface: #f7faff;
+  --academy-white: #ffffff;
+
+  --academy-radius: 18px;
+  --academy-shadow:
+    0 12px 35px rgba(15, 35, 75, 0.08);
 }
 
+
+/* ---------------------------------------------------------
+   2. GLOBAL TYPOGRAPHY
+   --------------------------------------------------------- */
+
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 .md-content {
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--academy-text);
+  font-weight: 750;
+  letter-spacing: -0.025em;
 }
 
 .md-typeset h1 {
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  color: var(--academy-dark);
+  font-size: 2.5rem;
 }
 
 .md-typeset h2 {
-  font-weight: 700;
-  letter-spacing: -0.015em;
+  font-size: 2rem;
 }
 
-.md-typeset h3 {
-  font-weight: 650;
+.md-typeset a {
+  color: var(--academy-blue);
 }
 
 
-/* ---------- Header ---------- */
+/* ---------------------------------------------------------
+   3. HEADER
+   --------------------------------------------------------- */
 
 .md-header {
-  background: linear-gradient(
-    135deg,
-    #0f172a 0%,
-    #172554 55%,
-    #1d4ed8 100%
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #06132b 0%,
+      #0b1f45 50%,
+      #1645a8 100%
+    );
+  box-shadow:
+    0 2px 14px rgba(0, 0, 0, 0.18);
 }
 
 .md-header__title {
+  font-weight: 750;
+}
+
+.md-header__topic {
   font-weight: 700;
 }
 
 
-/* ---------- Navigation ---------- */
+/* ---------------------------------------------------------
+   4. TOP NAVIGATION
+   --------------------------------------------------------- */
 
 .md-tabs {
-  background: #0f172a;
+  background: #08142c;
 }
 
 .md-tabs__link {
-  font-weight: 600;
+  font-weight: 650;
   opacity: 0.9;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.md-tabs__link--active,
 .md-tabs__link:hover {
   opacity: 1;
+  color: #ffffff;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+  color: #ffffff;
 }
 
 
-/* ---------- Sidebar ---------- */
+/* ---------------------------------------------------------
+   5. HIDE DOCUMENTATION ELEMENTS ON HOMEPAGE
+   --------------------------------------------------------- */
 
-.md-nav__item .md-nav__link--active {
-  color: var(--academy-primary);
-  font-weight: 700;
-}
-
-.md-nav__link:hover {
-  color: var(--academy-primary);
+.md-content__inner > .admonition:first-child {
+  margin-top: 0;
 }
 
 
-/* ---------- Links ---------- */
-
-.md-typeset a {
-  color: var(--academy-primary);
-}
-
-.md-typeset a:hover {
-  color: var(--academy-primary-dark);
-}
-
-
-/* ---------- Homepage hero ---------- */
+/* ---------------------------------------------------------
+   6. HERO
+   --------------------------------------------------------- */
 
 .academy-hero {
-  margin: -1rem -0.5rem 3rem;
-  padding: 5rem 2rem;
-  border-radius: 0 0 24px 24px;
+  position: relative;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(380px, 0.95fr);
+
+  min-height: 560px;
+
+  margin:
+    -1.5rem
+    -1.5rem
+    4rem;
+
+  padding:
+    5rem
+    5rem
+    4rem;
+
+  overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 85% 20%,
-      rgba(6, 182, 212, 0.25),
-      transparent 30%
+      circle at 82% 30%,
+      rgba(22, 199, 255, 0.16),
+      transparent 28%
     ),
     radial-gradient(
-      circle at 15% 80%,
-      rgba(37, 99, 235, 0.35),
-      transparent 35%
+      circle at 8% 90%,
+      rgba(37, 99, 235, 0.28),
+      transparent 32%
     ),
     linear-gradient(
-      135deg,
-      #0f172a 0%,
-      #172554 50%,
-      #1d4ed8 100%
+      120deg,
+      #06142e 0%,
+      #0b1f45 48%,
+      #164bc0 100%
     );
 
   color: white;
 }
 
-.academy-hero h1 {
-  margin-bottom: 1rem;
-  color: white;
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 850;
-  line-height: 1.05;
+
+/* Decorative circles */
+
+.academy-hero::before,
+.academy-hero::after {
+  content: "";
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
-.academy-hero p {
-  max-width: 760px;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 1.15rem;
-  line-height: 1.7;
+.academy-hero::before {
+  width: 360px;
+  height: 360px;
+
+  top: -170px;
+  right: 120px;
+}
+
+.academy-hero::after {
+  width: 280px;
+  height: 280px;
+
+  bottom: -170px;
+  left: -70px;
+}
+
+
+/* Hero content */
+
+.academy-hero-content {
+  position: relative;
+  z-index: 5;
+
+  align-self: center;
+
+  max-width: 680px;
 }
 
 .academy-eyebrow {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.4rem 0.8rem;
+  display: inline-flex;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+
+  padding:
+    0.55rem
+    1rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    rgba(255, 255, 255, 0.08);
 
-  color: #bae6fd;
-  font-size: 0.8rem;
-  font-weight: 700;
+  color: #b9eaff;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
+  backdrop-filter: blur(8px);
 }
 
 
-/* ---------- Hero buttons ---------- */
+/* Hero heading */
+
+.academy-hero h1 {
+  margin:
+    0
+    0
+    1.5rem;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.3rem
+    );
+
+  font-weight: 850;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.academy-hero h1 span {
+  color: var(--academy-cyan);
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #39d5ff 60%,
+      #16c7ff 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Hero description */
+
+.academy-hero-description {
+  max-width: 690px;
+
+  margin:
+    0
+    0
+    2rem;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+  font-size: 1.15rem;
+
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   7. HERO BUTTONS
+   --------------------------------------------------------- */
 
 .academy-buttons {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 2rem;
+
+  gap: 0.9rem;
+
+  margin-bottom: 2rem;
 }
 
 .academy-button {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
+  display: inline-flex;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  padding:
+    0.75rem
+    1.35rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
   border-radius: 10px;
 
-  background: white;
+  background: #ffffff;
 
-  color: #0f172a !important;
-  font-weight: 700;
+  color: #0c1935 !important;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
+  font-size: 0.95rem;
 
-.academy-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
+  font-weight: 750;
 
-.academy-button.secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: white !important;
-}
-
-
-/* ---------- Course cards ---------- */
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin: 2rem 0 3rem;
-}
-
-.course-card {
-  position: relative;
-
-  padding: 1.5rem;
-
-  border: 1px solid var(--academy-border);
-  border-radius: 16px;
-
-  background: white;
+  text-decoration: none !important;
 
   box-shadow:
-    0 4px 6px rgba(15, 23, 42, 0.04),
-    0 12px 30px rgba(15, 23, 42, 0.06);
+    0 8px 25px
+    rgba(0, 0, 0, 0.14);
 
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    border-color 0.2s ease;
+    background 0.2s ease;
 }
 
-.course-card:hover {
-  transform: translateY(-5px);
-
-  border-color: #bfdbfe;
+.academy-button:hover {
+  transform: translateY(-3px);
 
   box-shadow:
-    0 8px 12px rgba(15, 23, 42, 0.06),
-    0 20px 40px rgba(15, 23, 42, 0.1);
+    0 14px 32px
+    rgba(0, 0, 0, 0.22);
+
+  color: #07152f !important;
 }
 
-.course-card h3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.5rem;
+.academy-button-outline {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.06
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    );
+
+  color: #ffffff !important;
+
+  box-shadow: none;
 }
 
-.course-card p {
-  color: var(--academy-muted);
-  font-size: 0.92rem;
+.academy-button-outline:hover {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    );
+
+  color: #ffffff !important;
 }
 
-.course-icon {
+
+/* ---------------------------------------------------------
+   8. TECHNOLOGY PILLS
+   --------------------------------------------------------- */
+
+.academy-tech-pills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+}
+
+.academy-tech-pills span {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
-  width: 48px;
-  height: 48px;
+  align-items: center;
+
+  padding:
+    0.48rem
+    0.85rem;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.86
+    );
+
+  font-size: 0.8rem;
+
+  font-weight: 650;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* ---------------------------------------------------------
+   9. HERO IMAGE AREA
+   --------------------------------------------------------- */
+
+.academy-hero-visual {
+  position: relative;
+
+  min-height: 450px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.academy-engineer-image {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    100%,
+    560px
+  );
+
+  max-height: 510px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius:
+    28px
+    28px
+    0
+    0;
+
+  filter:
+    drop-shadow(
+      0 25px 45px
+      rgba(0, 0, 0, 0.35)
+    );
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 88%,
+      transparent 100%
+    );
+}
+
+.academy-image-glow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: 30px;
+  right: 5%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(22, 199, 255, 0.3),
+      transparent 68%
+    );
+
+  filter: blur(8px);
+
+  z-index: 1;
+}
+
+
+/* ---------------------------------------------------------
+   10. FLOATING TECHNOLOGY CARDS
+   --------------------------------------------------------- */
+
+.tech-float {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.3rem;
+
+  min-width: 150px;
+
+  padding:
+    0.85rem
+    1rem;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
 
   border-radius: 12px;
 
-  background: #eff6ff;
+  background:
+    rgba(
+      8,
+      25,
+      55,
+      0.78
+    );
 
-  font-size: 1.5rem;
+  color: #ffffff;
+
+  box-shadow:
+    0 15px 35px
+    rgba(
+      0,
+      0,
+      0,
+      0.2
+    );
+
+  backdrop-filter: blur(12px);
+
+  animation:
+    academy-float
+    5s
+    ease-in-out
+    infinite;
+}
+
+.tech-float strong {
+  font-size: 0.85rem;
+}
+
+.tech-float small {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.7
+    );
+
+  font-size: 0.7rem;
+
+  line-height: 1.4;
+}
+
+.tech-bigdata {
+  top: 80px;
+  left: 2%;
+}
+
+.tech-cloud {
+  top: 30px;
+  right: 2%;
+  animation-delay: 0.7s;
+}
+
+.tech-devops {
+  bottom: 125px;
+  left: 4%;
+  animation-delay: 1.2s;
+}
+
+.tech-python {
+  bottom: 75px;
+  right: 0;
+  animation-delay: 1.8s;
+}
+
+@keyframes academy-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 
-/* ---------- Stats ---------- */
+/* ---------------------------------------------------------
+   11. GENERAL SECTIONS
+   --------------------------------------------------------- */
 
-.academy-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 2rem 0 3rem;
+.academy-section {
+  margin:
+    0
+    0
+    4.5rem;
 }
 
-.academy-stat {
-  padding: 1.25rem;
+.academy-section-heading {
+  margin:
+    0
+    auto
+    2.3rem;
 
-  border: 1px solid var(--academy-border);
-  border-radius: 14px;
-
-  background: var(--academy-surface);
+  max-width: 850px;
 
   text-align: center;
 }
 
-.academy-stat strong {
-  display: block;
+.academy-section-heading h2 {
+  margin-bottom: 0.6rem;
 
-  color: var(--academy-primary);
-
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2rem;
 }
 
-.academy-stat span {
+.academy-section-heading p {
+  margin: 0;
+
   color: var(--academy-muted);
-  font-size: 0.85rem;
+
+  font-size: 1rem;
 }
 
 
-/* ---------- Learning path ---------- */
+/* ---------------------------------------------------------
+   12. COURSE CARDS
+   --------------------------------------------------------- */
 
-.learning-path {
+.academy-course-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 1.25rem;
 }
 
-.learning-step {
+.academy-course-card {
   display: flex;
-  gap: 1rem;
 
-  padding: 1.25rem;
+  flex-direction: column;
 
-  border: 1px solid var(--academy-border);
-  border-radius: 14px;
+  min-height: 260px;
 
-  background: white;
+  padding: 1.6rem;
+
+  border:
+    1px solid
+    var(--academy-border);
+
+  border-radius:
+    var(--academy-radius);
+
+  background:
+    #ffffff;
+
+  color:
+    var(--academy-text) !important;
+
+  text-decoration: none !important;
+
+  box-shadow:
+    var(--academy-shadow);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.learning-number {
+.academy-course-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    #9fc3ff;
+
+  box-shadow:
+    0 20px 45px
+    rgba(
+      15,
+      35,
+      75,
+      0.13
+    );
+}
+
+.academy-card-icon {
   display: flex;
-  flex: 0 0 38px;
+
   align-items: center;
   justify-content: center;
 
-  width: 38px;
-  height: 38px;
+  width: 54px;
+  height: 54px;
 
-  border-radius: 50%;
+  margin-bottom: 1.2rem;
 
-  background: var(--academy-primary);
+  border-radius: 14px;
 
-  color: white;
-  font-weight: 800;
+  background:
+    linear-gradient(
+      135deg,
+      #edf5ff,
+      #e5efff
+    );
+
+  font-size: 1.65rem;
+}
+
+.academy-course-card h3 {
+  margin:
+    0
+    0
+    0.75rem;
+
+  font-size: 1.25rem;
+}
+
+.academy-course-card p {
+  flex: 1;
+
+  margin:
+    0
+    0
+    1.2rem;
+
+  color:
+    var(--academy-muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+}
+
+.academy-course-card span {
+  color:
+    var(--academy-blue);
+
+  font-size: 0.85rem;
+
+  font-weight: 750;
 }
 
 
-/* ---------- Admonitions ---------- */
+/* ---------------------------------------------------------
+   13. LEARNING PROCESS
+   --------------------------------------------------------- */
 
-.md-typeset .admonition,
-.md-typeset details {
-  border-radius: 12px;
+.academy-process {
+  margin:
+    0
+    0
+    4.5rem;
 }
 
-.md-typeset .admonition-title {
+.academy-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 0.75rem;
+}
+
+.academy-process-card {
+  min-height: 150px;
+
+  padding: 1.4rem;
+
+  border:
+    1px solid
+    var(--academy-border);
+
+  border-radius: 16px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      15,
+      35,
+      75,
+      0.05
+    );
+
+  text-align: center;
+}
+
+.academy-process-card strong {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color:
+    var(--academy-blue);
+
+  font-size: 2rem;
+
+  font-weight: 850;
+}
+
+.academy-process-card h3 {
+  margin:
+    0
+    0
+    0.4rem;
+
+  font-size: 1rem;
+}
+
+.academy-process-card p {
+  margin: 0;
+
+  color:
+    var(--academy-muted);
+
+  font-size: 0.82rem;
+}
+
+.academy-process-arrow {
+  color:
+    #a7b8d6;
+
+  font-size: 1.5rem;
+
   font-weight: 700;
 }
 
 
-/* ---------- Code blocks ---------- */
+/* ---------------------------------------------------------
+   14. FINAL CTA
+   --------------------------------------------------------- */
+
+.academy-final-cta {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin:
+    1rem
+    0
+    2rem;
+
+  padding:
+    2.5rem
+    3rem;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(
+        22,
+        199,
+        255,
+        0.2
+      ),
+      transparent 25%
+    ),
+    linear-gradient(
+      120deg,
+      #091634,
+      #173e9f,
+      #2459d5
+    );
+
+  box-shadow:
+    0 20px 50px
+    rgba(
+      10,
+      35,
+      90,
+      0.18
+    );
+}
+
+.academy-final-cta h2 {
+  margin:
+    0
+    0
+    0.7rem;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+}
+
+.academy-final-cta p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.78
+    );
+
+  font-size: 0.95rem;
+}
+
+.academy-cta-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.7rem;
+
+  flex-shrink: 0;
+}
+
+
+/* ---------------------------------------------------------
+   15. REMOVE EXTRA HOMEPAGE SPACING
+   --------------------------------------------------------- */
+
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  margin-top: 0;
+}
+
+
+/* ---------------------------------------------------------
+   16. CODE / TABLES / DOCUMENTATION
+   --------------------------------------------------------- */
 
 .md-typeset pre {
   border-radius: 12px;
@@ -357,1154 +1035,260 @@ body {
   border-radius: 5px;
 }
 
-
-/* ---------- Tables ---------- */
-
 .md-typeset table:not([class]) {
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
-}
-
-
-/* ---------- Dark mode ---------- */
-
-[data-md-color-scheme="slate"] .course-card,
-[data-md-color-scheme="slate"] .learning-step {
-  background: #111827;
-  border-color: #263244;
-}
-
-[data-md-color-scheme="slate"] .academy-stat {
-  background: #111827;
-  border-color: #263244;
-}
-
-[data-md-color-scheme="slate"] .course-card p,
-[data-md-color-scheme="slate"] .academy-stat span {
-  color: #94a3b8;
-}
-
-[data-md-color-scheme="slate"] .md-typeset h1,
-[data-md-color-scheme="slate"] .md-typeset h2,
-[data-md-color-scheme="slate"] .md-typeset h3 {
-  color: #f8fafc;
-}
-
-
-/* ---------- Responsive design ---------- */
-
-@media screen and (max-width: 900px) {
-  .course-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .academy-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .learning-path {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .academy-hero {
-    margin-left: -0.25rem;
-    margin-right: -0.25rem;
-    padding: 3.5rem 1.25rem;
-  }
-
-  .course-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .academy-stats {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .academy-hero h1 {
-    font-size: 2.25rem;
-  }
-}
-
-/* =========================================================
-   CSS BUILD 2
-   Premium Academy Homepage
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   Academy trust / technology bar
-   --------------------------------------------------------- */
-
-.academy-trust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
-
-  margin: -1.5rem auto 3.5rem;
-  padding: 1rem;
-
-  border-bottom: 1px solid var(--academy-border);
-
-  color: var(--academy-muted);
-  font-size: 0.82rem;
-  font-weight: 650;
-}
-
-.academy-trust span {
-  padding: 0.55rem 0.9rem;
-
-  border: 1px solid var(--academy-border);
-  border-radius: 999px;
-
-  background: white;
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.academy-trust span:hover {
-  transform: translateY(-2px);
-
-  border-color: #bfdbfe;
-
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-}
-
-
-/* ---------------------------------------------------------
-   Course cards - premium version
-   --------------------------------------------------------- */
-
-.course-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 1.35rem;
-
-  margin: 2rem 0 4rem;
-}
-
-.course-card {
-  display: flex;
-  flex-direction: column;
-
-  min-height: 390px;
-
-  padding: 1.65rem;
-
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f8fafc 100%
-    );
-
-  box-shadow:
-    0 4px 8px rgba(15, 23, 42, 0.04),
-    0 14px 35px rgba(15, 23, 42, 0.07);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-7px);
-
-  border-color: #93c5fd;
-
-  box-shadow:
-    0 12px 20px rgba(15, 23, 42, 0.07),
-    0 25px 50px rgba(15, 23, 42, 0.12);
-}
-
-.course-card .course-icon {
-  width: 54px;
-  height: 54px;
-
-  margin-bottom: 1rem;
-
-  border-radius: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #eff6ff,
-      #dbeafe
-    );
-
-  box-shadow:
-    inset 0 0 0 1px rgba(37, 99, 235, 0.08);
-
-  font-size: 1.65rem;
-}
-
-.course-card h3 {
-  margin: 0 0 0.65rem;
-
-  color: #0f172a;
-
-  font-size: 1.25rem;
-  font-weight: 750;
-}
-
-.course-card p {
-  margin-bottom: 0.8rem;
-
-  color: #64748b;
-
-  font-size: 0.9rem;
-  line-height: 1.65;
-}
-
-.course-card ul {
-  margin: 0.4rem 0 1.3rem;
-  padding-left: 1.1rem;
-
-  color: #475569;
-
-  font-size: 0.84rem;
-}
-
-.course-card li {
-  margin: 0.2rem 0;
-}
-
-.course-card > a {
-  display: inline-flex;
-
-  margin-top: auto;
-
-  color: #2563eb;
-
-  font-size: 0.88rem;
-  font-weight: 750;
-
-  text-decoration: none;
-}
-
-.course-card > a:hover {
-  color: #1d4ed8;
-}
-
-
-/* ---------------------------------------------------------
-   Statistics / four-step section
-   --------------------------------------------------------- */
-
-.academy-stats {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
-  gap: 1rem;
-
-  margin: 2rem 0 4rem;
-}
-
-.academy-stat {
-  position: relative;
-
-  padding: 1.5rem 1rem;
-
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-
-  background: white;
-
-  text-align: center;
-
-  box-shadow:
-    0 5px 18px rgba(15, 23, 42, 0.05);
-}
-
-.academy-stat strong {
-  display: block;
-
-  margin-bottom: 0.45rem;
-
-  color: #2563eb;
-
-  font-size: 1.7rem;
-  font-weight: 850;
-}
-
-.academy-stat span {
-  color: #475569;
-
-  font-size: 0.82rem;
-  font-weight: 650;
-}
-
-
-/* ---------------------------------------------------------
-   Feature section
-   --------------------------------------------------------- */
-
-.academy-feature {
-  margin: 4rem 0;
-
-  padding: 3rem;
-
-  border: 1px solid #dbeafe;
-  border-radius: 22px;
-
-  background:
-    radial-gradient(
-      circle at 90% 10%,
-      rgba(6, 182, 212, 0.12),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #eff6ff 0%,
-      #ffffff 55%,
-      #f0fdfa 100%
-    );
-}
-
-.academy-feature h2 {
-  margin-top: 0;
-
-  color: #0f172a;
-
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.academy-feature > p {
-  max-width: 780px;
-
-  color: #475569;
-
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-
-/* ---------------------------------------------------------
-   Learning path
-   --------------------------------------------------------- */
-
-.learning-path {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 1rem;
-
-  margin-top: 2rem;
-}
-
-.learning-step {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 1rem;
-
-  padding: 1.2rem;
-
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-
-  background: rgba(255, 255, 255, 0.85);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.learning-step:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 10px 25px rgba(15, 23, 42, 0.08);
-}
-
-.learning-number {
-  flex: 0 0 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 38px;
-  height: 38px;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      #2563eb,
-      #06b6d4
-    );
-
-  color: white;
-
-  font-size: 0.85rem;
-  font-weight: 800;
-}
-
-
-/* ---------------------------------------------------------
-   Featured courses
-   --------------------------------------------------------- */
-
-.featured-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 1.35rem;
-
-  margin: 2rem 0 4rem;
-}
-
-.featured-card {
-  position: relative;
 
   overflow: hidden;
 
-  padding: 1.7rem;
-
-  min-height: 270px;
-
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #0f172a 0%,
-      #172554 60%,
-      #1d4ed8 100%
+  box-shadow:
+    0 6px 20px
+    rgba(
+      15,
+      35,
+      75,
+      0.05
     );
-
-  color: white;
-
-  box-shadow:
-    0 12px 30px rgba(15, 23, 42, 0.15);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
 }
 
-.featured-card::after {
-  content: "";
-
-  position: absolute;
-
-  width: 180px;
-  height: 180px;
-
-  right: -70px;
-  bottom: -80px;
-
-  border-radius: 50%;
-
-  background: rgba(6, 182, 212, 0.15);
-}
-
-.featured-card:hover {
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 20px 45px rgba(15, 23, 42, 0.22);
-}
-
-.featured-card h3 {
-  position: relative;
-  z-index: 1;
-
-  margin: 0.65rem 0;
-
-  color: white;
-
-  font-size: 1.35rem;
-  font-weight: 750;
-}
-
-.featured-card p {
-  position: relative;
-  z-index: 1;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 0.88rem;
-  line-height: 1.7;
-}
-
-.featured-card a {
-  position: relative;
-  z-index: 1;
-
-  display: inline-block;
-
-  margin-top: 0.8rem;
-
-  color: #bae6fd !important;
-
-  font-size: 0.88rem;
-  font-weight: 750;
-}
-
-.featured-label {
-  position: relative;
-  z-index: 1;
-
-  display: inline-block;
-
-  padding: 0.3rem 0.6rem;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  color: #bae6fd;
-
-  font-size: 0.67rem;
-  font-weight: 800;
-
-  letter-spacing: 0.08em;
-}
-
-
-/* ---------------------------------------------------------
-   Production scenario section
-   --------------------------------------------------------- */
-
-.scenario-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 1rem;
-
-  margin: 2rem 0;
-}
-
-.scenario-card {
-  display: flex;
-  flex-direction: column;
-
-  gap: 0.45rem;
-
-  padding: 1.25rem;
-
-  border: 1px solid #e2e8f0;
-  border-left: 4px solid #2563eb;
-
+.md-typeset .admonition,
+.md-typeset details {
   border-radius: 12px;
-
-  background: white;
-
-  box-shadow:
-    0 4px 15px rgba(15, 23, 42, 0.05);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.scenario-card:hover {
-  transform: translateX(4px);
-
-  box-shadow:
-    0 8px 22px rgba(15, 23, 42, 0.09);
-}
-
-.scenario-card strong {
-  color: #0f172a;
-
-  font-size: 0.95rem;
-}
-
-.scenario-card span {
-  color: #64748b;
-
-  font-size: 0.82rem;
 }
 
 
 /* ---------------------------------------------------------
-   Wide CTA button
+   17. DARK MODE
    --------------------------------------------------------- */
 
-.academy-wide-button {
-  display: block;
+[data-md-color-scheme="slate"] {
+  --academy-text: #f4f7ff;
+  --academy-muted: #9eabc3;
+  --academy-border: #273655;
+  --academy-surface: #0b1428;
+}
 
-  width: fit-content;
-
-  margin: 1.8rem auto 4rem;
-  padding: 0.85rem 1.4rem;
-
-  border-radius: 10px;
-
+[data-md-color-scheme="slate"]
+.academy-course-card,
+[data-md-color-scheme="slate"]
+.academy-process-card {
   background:
-    linear-gradient(
-      135deg,
-      #2563eb,
-      #1d4ed8
-    );
+    #0f1a31;
 
-  color: white !important;
-
-  font-size: 0.9rem;
-  font-weight: 750;
-
-  text-decoration: none;
-
-  box-shadow:
-    0 8px 20px rgba(37, 99, 235, 0.22);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  border-color:
+    #263653;
 }
 
-.academy-wide-button:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 12px 28px rgba(37, 99, 235, 0.3);
+[data-md-color-scheme="slate"]
+.academy-course-card p,
+[data-md-color-scheme="slate"]
+.academy-process-card p {
+  color:
+    #9eabc3;
 }
 
-
-/* ---------------------------------------------------------
-   Learning path cards
-   --------------------------------------------------------- */
-
-.path-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 1.25rem;
-
-  margin: 2rem 0 4rem;
-}
-
-.path-card {
-  padding: 1.6rem;
-
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-
-  background: white;
-
-  box-shadow:
-    0 5px 20px rgba(15, 23, 42, 0.05);
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.path-card:hover {
-  transform: translateY(-5px);
-
-  border-color: #93c5fd;
-
-  box-shadow:
-    0 14px 35px rgba(15, 23, 42, 0.1);
-}
-
-.path-card > span {
-  color: #2563eb;
-
-  font-size: 0.68rem;
-  font-weight: 800;
-
-  letter-spacing: 0.1em;
-}
-
-.path-card h3 {
-  margin: 0.55rem 0;
-
-  color: #0f172a;
-
-  font-size: 1.15rem;
-}
-
-.path-card p {
-  color: #64748b;
-
-  font-size: 0.86rem;
-  line-height: 1.65;
-}
-
-.path-card a {
-  display: inline-block;
-
-  margin-top: 0.6rem;
-
-  color: #2563eb !important;
-
-  font-size: 0.84rem;
-  font-weight: 750;
-}
-
-
-/* ---------------------------------------------------------
-   Technology roadmap
-   --------------------------------------------------------- */
-
-.technology-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  gap: 0.65rem;
-
-  margin: 2rem 0 4rem;
-}
-
-.technology-strip span {
-  padding: 0.65rem 1rem;
-
-  border: 1px solid #dbeafe;
-  border-radius: 999px;
-
-  background: #eff6ff;
-
-  color: #1e40af;
-
-  font-size: 0.78rem;
-  font-weight: 700;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.technology-strip span:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 7px 18px rgba(37, 99, 235, 0.12);
-}
-
-
-/* ---------------------------------------------------------
-   Final CTA
-   --------------------------------------------------------- */
-
-.academy-final-cta {
-  position: relative;
-
-  overflow: hidden;
-
-  margin: 4rem 0 2rem;
-
-  padding: 4rem 2rem;
-
-  border-radius: 24px;
-
+[data-md-color-scheme="slate"]
+.academy-card-icon {
   background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(6, 182, 212, 0.25),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #0f172a 0%,
-      #172554 55%,
-      #1d4ed8 100%
-    );
-
-  color: white;
-
-  text-align: center;
-
-  box-shadow:
-    0 20px 45px rgba(15, 23, 42, 0.18);
-}
-
-.academy-final-cta h2 {
-  margin-top: 0;
-
-  color: white;
-
-  font-size: 2.2rem;
-  font-weight: 800;
-}
-
-.academy-final-cta p {
-  max-width: 700px;
-
-  margin: 0 auto 1.8rem;
-
-  color: rgba(255, 255, 255, 0.8);
-
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.academy-final-cta .academy-buttons {
-  justify-content: center;
+    #162746;
 }
 
 
 /* ---------------------------------------------------------
-   Footer note
+   18. RESPONSIVE — TABLET
    --------------------------------------------------------- */
 
-.academy-footer-note {
-  margin: 3rem 0 1rem;
-  padding: 2rem;
+@media screen and (max-width: 1100px) {
 
-  border-top: 1px solid #e2e8f0;
-
-  color: #64748b;
-
-  text-align: center;
-
-  font-size: 0.85rem;
-  line-height: 1.8;
-}
-
-
-/* ---------------------------------------------------------
-   Hero improvements
-   --------------------------------------------------------- */
-
-.academy-hero {
-  position: relative;
-
-  overflow: hidden;
-
-  min-height: 470px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  margin: -1rem -0.5rem 0;
-
-  padding:
-    5rem
-    clamp(2rem, 8vw, 7rem);
-
-  border-radius: 0 0 28px 28px;
-
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(6, 182, 212, 0.24),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 10% 90%,
-      rgba(59, 130, 246, 0.22),
-      transparent 32%
-    ),
-    linear-gradient(
-      135deg,
-      #07111f 0%,
-      #0f1f46 52%,
-      #1d4ed8 100%
-    );
-
-  box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.18);
-}
-
-.academy-hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 360px;
-  height: 360px;
-
-  right: -120px;
-  top: -140px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  border-radius: 50%;
-}
-
-.academy-hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 240px;
-  height: 240px;
-
-  right: 70px;
-  bottom: -160px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: 50%;
-}
-
-.academy-eyebrow {
-  position: relative;
-  z-index: 1;
-
-  width: fit-content;
-
-  margin-bottom: 1.25rem;
-
-  padding: 0.45rem 0.85rem;
-
-  border: 1px solid rgba(186, 230, 253, 0.25);
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  color: #bae6fd;
-
-  font-size: 0.72rem;
-  font-weight: 800;
-
-  letter-spacing: 0.1em;
-}
-
-.academy-hero h1 {
-  position: relative;
-  z-index: 1;
-
-  max-width: 850px;
-
-  margin: 0;
-
-  color: white;
-
-  font-size: clamp(2.8rem, 6vw, 5.3rem);
-
-  font-weight: 850;
-
-  line-height: 0.98;
-
-  letter-spacing: -0.045em;
-}
-
-.academy-hero-text {
-  position: relative;
-  z-index: 1;
-
-  max-width: 760px;
-
-  margin-top: 1.4rem;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
-.academy-buttons {
-  position: relative;
-  z-index: 1;
-
-  margin-top: 1.7rem;
-}
-
-.academy-button {
-  padding:
-    0.78rem
-    1.25rem;
-
-  border-radius: 9px;
-
-  font-size: 0.86rem;
-
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.academy-button.secondary {
-  border-color: rgba(255, 255, 255, 0.22);
-
-  background: rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(8px);
-}
-
-
-/* ---------------------------------------------------------
-   Dark mode
-   --------------------------------------------------------- */
-
-[data-md-color-scheme="slate"] .academy-trust span,
-[data-md-color-scheme="slate"] .course-card,
-[data-md-color-scheme="slate"] .academy-stat,
-[data-md-color-scheme="slate"] .learning-step,
-[data-md-color-scheme="slate"] .scenario-card,
-[data-md-color-scheme="slate"] .path-card {
-  background: #111827;
-
-  border-color: #263244;
-}
-
-[data-md-color-scheme="slate"] .course-card h3,
-[data-md-color-scheme="slate"] .path-card h3,
-[data-md-color-scheme="slate"] .scenario-card strong {
-  color: #f8fafc;
-}
-
-[data-md-color-scheme="slate"] .course-card p,
-[data-md-color-scheme="slate"] .course-card ul,
-[data-md-color-scheme="slate"] .path-card p,
-[data-md-color-scheme="slate"] .scenario-card span {
-  color: #94a3b8;
-}
-
-[data-md-color-scheme="slate"] .academy-feature {
-  background: #0f172a;
-
-  border-color: #263244;
-}
-
-[data-md-color-scheme="slate"] .academy-feature h2 {
-  color: #f8fafc;
-}
-
-[data-md-color-scheme="slate"] .academy-feature > p {
-  color: #94a3b8;
-}
-
-[data-md-color-scheme="slate"] .technology-strip span {
-  background: #172554;
-
-  border-color: #1e3a8a;
-
-  color: #bfdbfe;
-}
-
-[data-md-color-scheme="slate"] .academy-footer-note {
-  border-color: #263244;
-
-  color: #94a3b8;
-}
-
-
-/* ---------------------------------------------------------
-   Responsive
-   --------------------------------------------------------- */
-
-@media screen and (max-width: 1000px) {
-
-  .course-grid,
-  .featured-grid {
+  .academy-hero {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+      1fr;
+
+    padding:
+      4rem
+      3rem;
+
+    text-align: center;
   }
 
-  .path-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .academy-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .academy-stats {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .academy-buttons,
+  .academy-tech-pills {
+    justify-content: center;
   }
 
+  .academy-hero-visual {
+    min-height: 430px;
+  }
+
+  .academy-course-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+  .academy-process-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+  .academy-process-arrow {
+    display: none;
+  }
+
+  .academy-final-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
 }
+
+
+/* ---------------------------------------------------------
+   19. RESPONSIVE — MOBILE
+   --------------------------------------------------------- */
 
 @media screen and (max-width: 700px) {
 
   .academy-hero {
-    min-height: 420px;
+    margin:
+      -1rem
+      -0.5rem
+      3rem;
 
     padding:
-      4rem 1.5rem;
+      3.5rem
+      1.25rem
+      3rem;
 
-    border-radius: 0 0 20px 20px;
+    border-radius:
+      0
+      0
+      24px
+      24px;
   }
 
   .academy-hero h1 {
-    font-size: 2.8rem;
+    font-size:
+      clamp(
+        2.6rem,
+        12vw,
+        4rem
+      );
   }
 
-  .academy-hero-text {
-    font-size: 0.95rem;
+  .academy-hero-description {
+    font-size: 1rem;
   }
 
-  .academy-trust {
-    justify-content: flex-start;
-
-    overflow-x: auto;
-
-    flex-wrap: nowrap;
-
-    padding-bottom: 0.8rem;
+  .academy-hero-visual {
+    min-height: 360px;
   }
 
-  .academy-trust span {
-    flex: 0 0 auto;
+  .academy-engineer-image {
+    width: 100%;
   }
 
-  .course-grid,
-  .featured-grid,
-  .scenario-grid,
-  .path-grid,
-  .learning-path {
+  .tech-float {
+    min-width: 115px;
+
+    padding:
+      0.6rem
+      0.7rem;
+  }
+
+  .tech-float small {
+    font-size: 0.6rem;
+  }
+
+  .tech-bigdata {
+    top: 30px;
+    left: 0;
+  }
+
+  .tech-cloud {
+    top: 0;
+    right: 0;
+  }
+
+  .tech-devops {
+    bottom: 80px;
+    left: 0;
+  }
+
+  .tech-python {
+    bottom: 25px;
+    right: 0;
+  }
+
+  .academy-course-grid {
     grid-template-columns: 1fr;
   }
 
-  .academy-feature {
-    padding: 2rem 1.25rem;
+  .academy-process-grid {
+    grid-template-columns: 1fr;
   }
 
-  .academy-feature h2 {
-    font-size: 1.6rem;
+  .academy-process-card {
+    min-height: auto;
   }
 
   .academy-final-cta {
-    padding: 3rem 1.25rem;
+    padding:
+      2rem
+      1.4rem;
   }
 
   .academy-final-cta h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
+  .academy-cta-buttons {
+    width: 100%;
+  }
+
+  .academy-cta-buttons .academy-button {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 480px) {
 
-  .academy-hero h1 {
-    font-size: 2.35rem;
+/* ---------------------------------------------------------
+   20. VERY SMALL SCREENS
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 420px) {
+
+  .academy-hero {
+    padding:
+      3rem
+      1rem
+      2.5rem;
   }
 
-  .academy-buttons {
-    flex-direction: column;
-    align-items: stretch;
+  .academy-eyebrow {
+    font-size: 0.65rem;
   }
 
-  .academy-button {
-    text-align: center;
+  .academy-tech-pills span {
+    font-size: 0.7rem;
   }
 
-  .academy-stats {
-    grid-template-columns: 1fr 1fr;
+  .tech-float {
+    transform: scale(0.85);
   }
-
 }
-
