@@ -1,93 +1,203 @@
-site_name: CDP & Hadoop Big Data Training
-site_description: Architecture, components, dependencies, operations, and interview preparation for CDP and Hadoop.
+```yaml
+site_name: Abhimanyu's Tech Academy
+site_description: Practical Big Data, Cloud, DevOps, Python and Automation training with production-focused learning.
 site_author: Abhimanyu Kumar
-repo_url: https://github.com/Abhimanyu654/hadoop-bigdata-training
-repo_name: Abhimanyu654/hadoop-bigdata-training
+
+repo_url: https://github.com/Abhimanyu654/CDP-hadoop-bigdata-training
+repo_name: Abhimanyu654/CDP-hadoop-bigdata-training
 
 theme:
   name: material
+
+  language: en
+
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
+    - navigation.path
     - navigation.top
-    - content.code.copy
+    - navigation.tracking
+
     - search.suggest
     - search.highlight
+    - search.share
+
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+    - toc.follow
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  favicon: assets/favicon.png
+
+  icon:
+    logo: material/school
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Abhimanyu654/CDP-hadoop-bigdata-training
+      name: GitHub Repository
+
+  generator: false
+
+copyright: "© 2026 Abhimanyu Kumar — Abhimanyu's Tech Academy"
 
 markdown_extensions:
   - admonition
   - attr_list
   - tables
+
   - toc:
       permalink: true
+
   - pymdownx.superfences
+
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.details
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - pymdownx.inlinehilite
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
-  - Home: index.md
-  - Roadmap: 00-learning-roadmap.md
-  - Dependencies: 00-service-dependency-map.md
-  - HDFS:
-      - Overview: 01-hdfs/index.md
-      - Architecture: 01-hdfs/hdfs-architecture.md
-      - NameNode: 01-hdfs/namenode.md
-      - DataNode: 01-hdfs/datanode.md
-      - Read flow: 01-hdfs/hdfs-read-architecture.md
-      - Write flow: 01-hdfs/hdfs-write-architecture.md
-      - FSImage and EditLog: 01-hdfs/fsimage-editlog.md
-      - JournalNodes: 01-hdfs/journalnodes.md
-      - HA and ZooKeeper: 01-hdfs/hdfs-ha-and-zookeeper.md
-  - YARN:
-      - Overview: 02-yarn/index.md
-      - ResourceManager: 02-yarn/resource-manager.md
-      - NodeManager: 02-yarn/node-manager.md
-      - ApplicationMaster and Containers: 02-yarn/application-master-container.md
-  - MapReduce and JobHistory:
-      - Overview: 03-mapreduce-jobhistory/index.md
-      - Map, Shuffle, Reduce: 03-mapreduce-jobhistory/map-shuffle-reduce.md
-      - JobHistory Server: 03-mapreduce-jobhistory/jobhistory-server.md
-  - Spark:
-      - Overview: 04-spark/index.md
-      - Driver and Executors: 04-spark/driver-executors.md
-      - DAG, Stages, Tasks: 04-spark/dag-stages-tasks.md
-  - Spark on YARN:
-      - Overview: 05-spark-on-yarn/index.md
-      - Client vs Cluster: 05-spark-on-yarn/client-vs-cluster-mode.md
-      - Spark History Server: 05-spark-on-yarn/spark-history-server.md
-  - Hive:
-      - Overview: 06-hive/index.md
-      - HiveServer2: 06-hive/hiveserver2.md
-      - Hive Metastore: 06-hive/hive-metastore.md
-      - Managed vs External: 06-hive/managed-external-tables.md
-  - Tez:
-      - Overview: 07-tez/index.md
-      - DAG and AM: 07-tez/tez-dag-am.md
-  - Impala:
-      - Overview: 08-impala/index.md
-      - impalad: 08-impala/impalad.md
-      - Catalog Service: 08-impala/catalogd.md
-      - StateStore: 08-impala/statestored.md
-  - Kerberos: 09-kerberos/index.md
-  - Ranger, KMS, RMS:
-      - Overview: 10-ranger-kms-rms/index.md
-      - Ranger Admin and Plugins: 10-ranger-kms-rms/ranger-admin-plugin.md
-      - Ranger KMS: 10-ranger-kms-rms/ranger-kms.md
-      - Ranger RMS: 10-ranger-kms-rms/ranger-rms.md
-  - Atlas:
-      - Overview: 11-atlas/index.md
-      - Metadata and Lineage: 11-atlas/metadata-lineage-classification.md
-  - ZooKeeper:
-      - Overview: 12-zookeeper/index.md
-      - Quorum and Failures: 12-zookeeper/quorum-and-failures.md
-  - Kafka:
-      - Overview: 13-kafka/index.md
-      - Broker, Partitions, ISR: 13-kafka/broker-topic-partition-isr.md
-      - ZooKeeper vs KRaft: 13-kafka/zookeeper-vs-kraft.md
-  - Production troubleshooting:
-      - Overview: 14-production-troubleshooting/index.md
-      - Runbook template: 14-production-troubleshooting/runbook-template.md
-  - Supporting services: 15-supporting-services/index.md
-  - References: references.md
-  - Lesson template: 99-lesson-template.md
-  - Publish website: 98-publish-website.md
-  - Training business: 97-training-business.md
+
+  - 🏠 Home: index.md
+
+  - 🎯 Learning:
+      - Learning Roadmap: 00-learning-roadmap.md
+      - Service Dependency Map: 00-service-dependency-map.md
+
+  - 🐘 Big Data:
+
+      - HDFS:
+          - Overview: 01-hdfs/index.md
+          - Architecture: 01-hdfs/hdfs-architecture.md
+          - NameNode: 01-hdfs/namenode.md
+          - DataNode: 01-hdfs/datanode.md
+          - Read Flow: 01-hdfs/hdfs-read-architecture.md
+          - Write Flow: 01-hdfs/hdfs-write-architecture.md
+          - FSImage and EditLog: 01-hdfs/fsimage-editlog.md
+          - JournalNodes: 01-hdfs/journalnodes.md
+          - HA and ZooKeeper: 01-hdfs/hdfs-ha-and-zookeeper.md
+
+      - YARN:
+          - Overview: 02-yarn/index.md
+          - ResourceManager: 02-yarn/resource-manager.md
+          - NodeManager: 02-yarn/node-manager.md
+          - ApplicationMaster and Containers: 02-yarn/application-master-container.md
+
+      - MapReduce:
+          - Overview: 03-mapreduce-jobhistory/index.md
+          - Map, Shuffle and Reduce: 03-mapreduce-jobhistory/map-shuffle-reduce.md
+          - JobHistory Server: 03-mapreduce-jobhistory/jobhistory-server.md
+
+      - Spark:
+          - Overview: 04-spark/index.md
+          - Driver and Executors: 04-spark/driver-executors.md
+          - DAG, Stages and Tasks: 04-spark/dag-stages-tasks.md
+
+      - Spark on YARN:
+          - Overview: 05-spark-on-yarn/index.md
+          - Client vs Cluster: 05-spark-on-yarn/client-vs-cluster-mode.md
+          - Spark History Server: 05-spark-on-yarn/spark-history-server.md
+
+      - Hive:
+          - Overview: 06-hive/index.md
+          - HiveServer2: 06-hive/hiveserver2.md
+          - Hive Metastore: 06-hive/hive-metastore.md
+          - Managed vs External Tables: 06-hive/managed-external-tables.md
+
+      - Tez:
+          - Overview: 07-tez/index.md
+          - DAG and ApplicationMaster: 07-tez/tez-dag-am.md
+
+      - Impala:
+          - Overview: 08-impala/index.md
+          - impalad: 08-impala/impalad.md
+          - Catalog Service: 08-impala/catalogd.md
+          - StateStore: 08-impala/statestored.md
+
+      - Kafka:
+          - Overview: 13-kafka/index.md
+          - Broker, Partitions and ISR: 13-kafka/broker-topic-partition-isr.md
+          - ZooKeeper vs KRaft: 13-kafka/zookeeper-vs-kraft.md
+
+  - 🔐 Security & Governance:
+
+      - Kerberos:
+          - Overview: 09-kerberos/index.md
+
+      - Ranger, KMS and RMS:
+          - Overview: 10-ranger-kms-rms/index.md
+          - Ranger Admin and Plugins: 10-ranger-kms-rms/ranger-admin-plugin.md
+          - Ranger KMS: 10-ranger-kms-rms/ranger-kms.md
+          - Ranger RMS: 10-ranger-kms-rms/ranger-rms.md
+
+      - Atlas:
+          - Overview: 11-atlas/index.md
+          - Metadata, Lineage and Classification: 11-atlas/metadata-lineage-classification.md
+
+      - ZooKeeper:
+          - Overview: 12-zookeeper/index.md
+          - Quorum and Failures: 12-zookeeper/quorum-and-failures.md
+
+  - 🛠️ Production Engineering:
+
+      - Production Troubleshooting:
+          - Overview: 14-production-troubleshooting/index.md
+          - HDFS Disk Full: 14-production-troubleshooting/hdfs-disk-full.md
+          - DataNode Down: 14-production-troubleshooting/datanode-down.md
+          - YARN Application Stuck: 14-production-troubleshooting/yarn-application-stuck.md
+          - Kerberos Authentication Failed: 14-production-troubleshooting/kerberos-authentication-failed.md
+          - Runbook Template: 14-production-troubleshooting/runbook-template.md
+
+      - Supporting Services:
+          - Overview: 15-supporting-services/index.md
+
+  - 📚 Resources:
+      - References: references.md
+      - Lesson Template: 99-lesson-template.md
+
+  - 🚀 Website:
+      - Publish Website: 98-publish-website.md
+      - Training Business: 97-training-business.md
+
+plugins:
+  - search
+
+strict: false
+```
