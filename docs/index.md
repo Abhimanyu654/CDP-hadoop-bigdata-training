@@ -1,9 +1,3 @@
----
-hide:
-  - toc
-  - path
----
-
 <div class="academy-hero">
 
   <div class="academy-hero-content">
