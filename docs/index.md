@@ -1,25 +1,42 @@
-````markdown
+
+at the end.
+
+The content below is the **actual file content**.
+
+:::writing{variant="document" id="61542" title="New Professional Academy Homepage — docs/index.md"}
 <div class="academy-hero">
 
-<span class="academy-eyebrow">BIG DATA • CLOUD • DEVOPS • AUTOMATION</span>
+<div class="academy-eyebrow">ABHIMANYU'S TECH ACADEMY</div>
 
-# Master Real-World Technology Skills
+<h1>Master Real-World<br>Technology Skills</h1>
 
-Practical learning for Big Data, Cloud, DevOps, Python, Automation and Production Engineering.
-
-Learn the concepts, understand the architecture, practice the commands, troubleshoot real-world problems and build production-ready skills.
+<p class="academy-hero-text">
+Learn Big Data, Cloud, DevOps, Python and Automation through practical
+engineering content, hands-on labs and production troubleshooting.
+</p>
 
 <div class="academy-buttons">
-
-<a href="00-learning-roadmap/" class="academy-button">🚀 Start Learning</a>
-
-<a href="14-production-troubleshooting/" class="academy-button secondary">🛠️ Explore Production Labs</a>
-
+<a href="00-learning-roadmap/" class="academy-button">Explore Learning</a>
+<a href="14-production-troubleshooting/" class="academy-button secondary">Explore Production Labs</a>
 </div>
 
 </div>
 
-## Learn by Technology
+<div class="academy-trust">
+
+<span>🐘 Hadoop</span>
+<span>⚡ Spark</span>
+<span>☁️ Cloud</span>
+<span>⚙️ DevOps</span>
+<span>🐍 Python</span>
+<span>☸️ Kubernetes</span>
+<span>🔧 Terraform</span>
+
+</div>
+
+## Explore Learning
+
+Build skills across the technologies used by modern data and infrastructure teams.
 
 <div class="course-grid">
 
@@ -27,21 +44,21 @@ Learn the concepts, understand the architecture, practice the commands, troubles
 
 <div class="course-icon">🐘</div>
 
-### Big Data
+<h3>Big Data</h3>
 
-Build strong foundations in the Hadoop ecosystem.
+<p>
+Master the Hadoop ecosystem from architecture and components to
+production administration and troubleshooting.
+</p>
 
-**Learn**
-
-- HDFS
-- YARN
-- Spark
-- Hive
-- Impala
-- Kafka
-- Kerberos
-- Ranger
-- Atlas
+<ul>
+<li>HDFS</li>
+<li>YARN</li>
+<li>Spark</li>
+<li>Hive & Impala</li>
+<li>Kafka</li>
+<li>Kerberos & Ranger</li>
+</ul>
 
 <a href="01-hdfs/">Explore Big Data →</a>
 
@@ -51,22 +68,23 @@ Build strong foundations in the Hadoop ecosystem.
 
 <div class="course-icon">☁️</div>
 
-### Cloud
+<h3>Cloud Engineering</h3>
 
-Learn cloud infrastructure and production architecture.
+<p>
+Learn how modern infrastructure is designed, secured, deployed and
+operated in the cloud.
+</p>
 
-**Coming next**
+<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>GCP</li>
+<li>Networking</li>
+<li>Storage</li>
+<li>Cloud Architecture</li>
+</ul>
 
-- AWS
-- Azure
-- GCP
-- VPC networking
-- Storage
-- IAM
-- Kubernetes
-- Cloud architecture
-
-<a href="00-learning-roadmap/">View Learning Roadmap →</a>
+<a href="00-learning-roadmap/">Explore Cloud →</a>
 
 </div>
 
@@ -74,22 +92,23 @@ Learn cloud infrastructure and production architecture.
 
 <div class="course-icon">⚙️</div>
 
-### DevOps
+<h3>DevOps</h3>
 
-Learn how modern applications are built, deployed and operated.
+<p>
+Learn the tools and practices used to automate software delivery and
+production infrastructure.
+</p>
 
-**Coming next**
+<ul>
+<li>Linux</li>
+<li>Git & GitHub</li>
+<li>Docker</li>
+<li>Kubernetes</li>
+<li>Terraform</li>
+<li>CI/CD</li>
+</ul>
 
-- Linux
-- Git
-- GitHub
-- Docker
-- Kubernetes
-- Terraform
-- Ansible
-- CI/CD
-
-<a href="00-learning-roadmap/">View Learning Roadmap →</a>
+<a href="00-learning-roadmap/">Explore DevOps →</a>
 
 </div>
 
@@ -97,21 +116,23 @@ Learn how modern applications are built, deployed and operated.
 
 <div class="course-icon">🐍</div>
 
-### Python & PySpark
+<h3>Python & Data Engineering</h3>
 
-Build automation and data engineering skills with Python.
+<p>
+Use Python to automate operations, process data and build modern
+data engineering workflows.
+</p>
 
-**Coming next**
+<ul>
+<li>Python</li>
+<li>NumPy</li>
+<li>Pandas</li>
+<li>PySpark</li>
+<li>Automation</li>
+<li>Data Engineering</li>
+</ul>
 
-- Python
-- NumPy
-- Pandas
-- PySpark
-- Data engineering
-- Automation
-- Scripting
-
-<a href="00-learning-roadmap/">View Learning Roadmap →</a>
+<a href="00-learning-roadmap/">Explore Python →</a>
 
 </div>
 
@@ -119,21 +140,23 @@ Build automation and data engineering skills with Python.
 
 <div class="course-icon">📊</div>
 
-### Monitoring & Operations
+<h3>Monitoring & Observability</h3>
 
-Learn how to monitor and operate production platforms.
+<p>
+Learn how engineers monitor infrastructure, detect problems and
+understand production performance.
+</p>
 
-**Coming next**
+<ul>
+<li>Prometheus</li>
+<li>Grafana</li>
+<li>Alerting</li>
+<li>Logging</li>
+<li>Capacity Planning</li>
+<li>Incident Response</li>
+</ul>
 
-- Prometheus
-- Grafana
-- Alerting
-- Logging
-- Performance monitoring
-- Capacity planning
-- Incident response
-
-<a href="14-production-troubleshooting/">Explore Operations →</a>
+<a href="00-learning-roadmap/">Explore Monitoring →</a>
 
 </div>
 
@@ -141,18 +164,21 @@ Learn how to monitor and operate production platforms.
 
 <div class="course-icon">🧪</div>
 
-### Hands-on Labs
+<h3>Hands-on Labs</h3>
 
-Learn by solving realistic engineering problems.
+<p>
+Move beyond theory and practice realistic infrastructure and
+production engineering scenarios.
+</p>
 
-**Focus**
-
-- Production scenarios
-- Troubleshooting
-- Performance issues
-- Resource management
-- Cluster operations
-- Interview scenarios
+<ul>
+<li>Cluster Operations</li>
+<li>Troubleshooting</li>
+<li>Performance Problems</li>
+<li>Resource Management</li>
+<li>Production Incidents</li>
+<li>Interview Scenarios</li>
+</ul>
 
 <a href="14-production-troubleshooting/">Explore Labs →</a>
 
@@ -162,156 +188,78 @@ Learn by solving realistic engineering problems.
 
 ---
 
-## What Makes This Training Different
+## Learn. Practice. Troubleshoot. Operate.
 
 <div class="academy-stats">
 
 <div class="academy-stat">
-
-<strong>🏗️</strong>
-
-<span>Architecture First</span>
-
+<strong>01</strong>
+<span>Understand the Architecture</span>
 </div>
 
 <div class="academy-stat">
-
-<strong>💻</strong>
-
-<span>Hands-on Commands</span>
-
+<strong>02</strong>
+<span>Practice the Technology</span>
 </div>
 
 <div class="academy-stat">
-
-<strong>🛠️</strong>
-
-<span>Production Troubleshooting</span>
-
+<strong>03</strong>
+<span>Troubleshoot Real Problems</span>
 </div>
 
 <div class="academy-stat">
-
-<strong>🎯</strong>
-
-<span>Interview Focused</span>
-
+<strong>04</strong>
+<span>Operate in Production</span>
 </div>
 
 </div>
 
-### Learn the way an engineer works
+<div class="academy-feature">
 
-This platform is being built around a simple idea:
+<h2>Learn like a Production Engineer</h2>
 
-> **Don't just learn what a technology is. Learn how to operate it.**
-
-For every major technology, the goal is to understand:
-
-```text
-Architecture
-     ↓
-Components
-     ↓
-Data / Request Flow
-     ↓
-Configuration
-     ↓
-Commands
-     ↓
-Monitoring
-     ↓
-Troubleshooting
-     ↓
-Production Operations
-````
-
----
-
-## 🧭 Recommended Learning Path
+<p>
+Most tutorials explain what a technology is.
+This academy focuses on what happens when that technology is actually
+running in a production environment.
+</p>
 
 <div class="learning-path">
 
 <div class="learning-step">
-
 <div class="learning-number">1</div>
-
 <div>
-
-### Hadoop Foundations
-
-Understand the Hadoop ecosystem and how its components work together.
-
+<strong>Architecture</strong>
+<br>
+Understand how the system works.
 </div>
-
 </div>
 
 <div class="learning-step">
-
 <div class="learning-number">2</div>
-
 <div>
-
-### HDFS
-
-Learn NameNode, DataNode, replication, read/write flow and HA.
-
+<strong>Configuration</strong>
+<br>
+Understand the important settings and dependencies.
 </div>
-
 </div>
 
 <div class="learning-step">
-
 <div class="learning-number">3</div>
-
 <div>
-
-### YARN
-
-Understand ResourceManager, NodeManager, ApplicationMaster and containers.
-
+<strong>Operations</strong>
+<br>
+Learn the commands and procedures engineers use.
 </div>
-
 </div>
 
 <div class="learning-step">
-
 <div class="learning-number">4</div>
-
 <div>
-
-### Spark
-
-Learn drivers, executors, DAGs, stages, tasks and Spark on YARN.
-
+<strong>Troubleshooting</strong>
+<br>
+Diagnose failures systematically.
 </div>
-
-</div>
-
-<div class="learning-step">
-
-<div class="learning-number">5</div>
-
-<div>
-
-### Security
-
-Understand Kerberos, Ranger, KMS and enterprise security concepts.
-
-</div>
-
-</div>
-
-<div class="learning-step">
-
-<div class="learning-number">6</div>
-
-<div>
-
-### Production Operations
-
-Practice troubleshooting, monitoring, capacity management and incident response.
-
 </div>
 
 </div>
@@ -320,81 +268,52 @@ Practice troubleshooting, monitoring, capacity management and incident response.
 
 ---
 
-## 🛠️ Production Engineering
+## Featured Learning
 
-Theory is only the beginning.
+<div class="featured-grid">
 
-Production engineers need to know how to investigate problems safely.
+<div class="featured-card">
 
-Examples covered in this platform include:
+<span class="featured-label">BIG DATA</span>
 
-!!! warning "Production scenario"
+<h3>HDFS Administration</h3>
 
-```
-A DataNode reaches high disk utilization.
+<p>
+Understand NameNode, DataNode, replication, read/write flow,
+high availability and production storage management.
+</p>
 
-Instead of simply restarting services, learn how to determine whether the problem is HDFS capacity, replication, YARN local-disk health, application behavior or underlying OS storage.
-```
-
-### Production troubleshooting
-
-<a href="14-production-troubleshooting/">Open Production Troubleshooting →</a>
-
----
-
-## 📚 Current Big Data Curriculum
-
-| Technology        | Topics                                                 |
-| ----------------- | ------------------------------------------------------ |
-| **HDFS**          | Architecture, NameNode, DataNode, read/write flow, HA  |
-| **YARN**          | ResourceManager, NodeManager, containers, applications |
-| **MapReduce**     | Map, Shuffle, Reduce, JobHistory                       |
-| **Spark**         | Driver, Executors, DAG, Stages, Tasks                  |
-| **Spark on YARN** | Client mode, Cluster mode, History Server              |
-| **Hive**          | HiveServer2, Metastore, table types                    |
-| **Tez**           | DAG and ApplicationMaster                              |
-| **Impala**        | impalad, Catalog Service, StateStore                   |
-| **Kerberos**      | Authentication and enterprise security                 |
-| **Ranger**        | Policies, plugins, KMS and RMS                         |
-| **Atlas**         | Metadata, lineage and classification                   |
-| **ZooKeeper**     | Quorum, coordination and failures                      |
-| **Kafka**         | Brokers, topics, partitions, ISR and KRaft             |
-
----
-
-## 🚀 What Is Coming Next
-
-This platform will continue expanding beyond Hadoop.
-
-<div class="course-grid">
-
-<div class="course-card">
-
-<div class="course-icon">☁️</div>
-
-### AWS & Cloud
-
-Cloud infrastructure, networking, storage, security, Kubernetes and production architecture.
+<a href="01-hdfs/">Start HDFS →</a>
 
 </div>
 
-<div class="course-card">
+<div class="featured-card">
 
-<div class="course-icon">🔧</div>
+<span class="featured-label">PROCESSING</span>
 
-### DevOps
+<h3>Spark Administration</h3>
 
-Git, Linux, Docker, Kubernetes, Terraform, Ansible and CI/CD.
+<p>
+Understand drivers, executors, DAGs, stages, tasks and Spark
+resource behaviour in production environments.
+</p>
+
+<a href="04-spark/">Start Spark →</a>
 
 </div>
 
-<div class="course-card">
+<div class="featured-card">
 
-<div class="course-icon">🐍</div>
+<span class="featured-label">OPERATIONS</span>
 
-### Python & Data Engineering
+<h3>Production Troubleshooting</h3>
 
-Python, Pandas, NumPy, PySpark and automation.
+<p>
+Learn how to investigate DataNode failures, disk pressure,
+YARN application issues and Kerberos authentication problems.
+</p>
+
+<a href="14-production-troubleshooting/">Start Troubleshooting →</a>
 
 </div>
 
@@ -402,62 +321,153 @@ Python, Pandas, NumPy, PySpark and automation.
 
 ---
 
-## 👨‍💻 About the Academy
+## Production Engineering
 
-**Abhimanyu's Tech Academy** is being built as a practical technology learning platform focused on the skills engineers need to work with real production systems.
+### What would you do?
 
-The goal is simple:
+<div class="scenario-grid">
 
-> **Learn → Practice → Troubleshoot → Build → Operate**
+<div class="scenario-card">
+<strong>🔥 DataNode at 92% disk usage</strong>
+<span>Identify the real cause before taking action.</span>
+</div>
 
-The platform will evolve continuously as new technologies, labs and production scenarios are added.
+<div class="scenario-card">
+<strong>⚡ Spark application keeps failing</strong>
+<span>Determine whether the problem is memory, disk or resources.</span>
+</div>
+
+<div class="scenario-card">
+<strong>⏳ YARN application is stuck</strong>
+<span>Investigate queues, resources, containers and application state.</span>
+</div>
+
+<div class="scenario-card">
+<strong>🔐 Kerberos authentication fails</strong>
+<span>Trace tickets, keytabs, DNS, time synchronization and principals.</span>
+</div>
+
+</div>
+
+<a class="academy-wide-button" href="14-production-troubleshooting/">
+Explore Production Troubleshooting
+</a>
 
 ---
 
-## ⭐ Start Your Journey
+## Learning Paths
 
-Ready to begin?
+<div class="path-grid">
 
-<a href="00-learning-roadmap/" class="academy-button">🚀 Start the Learning Roadmap</a>
+<div class="path-card">
 
-<a href="01-hdfs/" class="academy-button">🐘 Start with HDFS</a>
+<span>PATH 01</span>
 
-````
+<h3>Big Data Engineer</h3>
+
+<p>
+Hadoop → HDFS → YARN → Spark → Hive → Kafka → Security →
+Production Operations
+</p>
+
+<a href="00-learning-roadmap/">View Path →</a>
+
+</div>
+
+<div class="path-card">
+
+<span>PATH 02</span>
+
+<h3>Cloud & DevOps Engineer</h3>
+
+<p>
+Linux → Git → Docker → Kubernetes → Terraform → AWS →
+CI/CD → Monitoring
+</p>
+
+<a href="00-learning-roadmap/">Coming Soon →</a>
+
+</div>
+
+<div class="path-card">
+
+<span>PATH 03</span>
+
+<h3>Data Engineering</h3>
+
+<p>
+Python → SQL → Spark → PySpark → Data Pipelines →
+Cloud Data Platforms
+</p>
+
+<a href="00-learning-roadmap/">Coming Soon →</a>
+
+</div>
+
+</div>
+
+---
+
+## The Technology Roadmap
+
+The academy will continue expanding beyond Hadoop.
+
+<div class="technology-strip">
+
+<span>Hadoop</span>
+<span>Spark</span>
+<span>Kafka</span>
+<span>Python</span>
+<span>PySpark</span>
+<span>AWS</span>
+<span>Azure</span>
+<span>GCP</span>
+<span>Docker</span>
+<span>Kubernetes</span>
+<span>Terraform</span>
+<span>Ansible</span>
+<span>Prometheus</span>
+<span>Grafana</span>
+<span>Automation</span>
+
+</div>
+
+---
+
+## 🚀 Start Learning
+
+<div class="academy-final-cta">
+
+<h2>Your journey starts here.</h2>
+
+<p>
+Learn the technology. Build the system. Break it safely.
+Understand why it failed. Then learn how to operate it.
+</p>
+
+<div class="academy-buttons">
+<a href="00-learning-roadmap/" class="academy-button">Start Learning</a>
+<a href="01-hdfs/" class="academy-button secondary">Start with HDFS</a>
+</div>
+
+</div>
+
+---
+
+<div class="academy-footer-note">
+
+**Abhimanyu's Tech Academy**
+
+Learn • Build • Troubleshoot • Operate
+
+</div>
+:::
 
 ### Commit it
 
-At the bottom of GitHub:
+At the bottom of GitHub choose:
 
-**Commit message:**
+**Commit message**
 
 ```text
-Create professional academy homepage
-````
-
-Keep:
-
-**Commit directly to the `main` branch**
-
-Then click **Commit changes**.
-
----
-
-### What you'll see
-
-GitHub Actions will automatically build the site.
-
-After the green deployment, refresh your website.
-
-The current page:
-
-> `Spark: Architecture, Components, Dependencies...`
-
-will no longer be your first impression.
-
-Instead, visitors will see:
-
-> **Master Real-World Technology Skills**
-
-with Big Data, Cloud, DevOps, Python, Monitoring and Hands-on Labs sections.
-
-**After you commit it and deployment turns green, send me a screenshot of the new homepage.** Then we'll refine the design rather than blindly adding more code.
+Build premium academy homepage
