@@ -429,7 +429,7 @@ The academy will continue expanding beyond Hadoop.
 
 ---
 
-## 🚀 Start Learning
+##  Start Learning
 
 <div class="academy-final-cta">
 
@@ -456,13 +456,4 @@ Understand why it failed. Then learn how to operate it.
 Learn • Build • Troubleshoot • Operate
 
 </div>
-:::
 
-### Commit it
-
-At the bottom of GitHub choose:
-
-**Commit message**
-
-```text
-Build premium academy homepage
