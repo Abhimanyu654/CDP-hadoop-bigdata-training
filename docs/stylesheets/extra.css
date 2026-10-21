@@ -1,165 +1,120 @@
-/* =========================================================
-   ABHIMANYU'S TECH ACADEMY
-   Professional MkDocs Material Theme
-   ========================================================= */
-
-/* ---------- 1. Brand colors and global typography ---------- */
+/*
+ * Abhimanyu's Tech Academy
+ * Compact, full-width, responsive homepage
+ */
 
 :root {
-  --academy-blue: #2563eb;
-  --academy-blue-dark: #1d4ed8;
-  --academy-cyan: #06b6d4;
-  --academy-navy: #0b1429;
-  --academy-navy-light: #14264a;
-  --academy-text: #111b31;
+  --academy-primary: #2563eb;
+  --academy-primary-dark: #1746b8;
+  --academy-cyan: #55d6f5;
+  --academy-dark: #0b1530;
+  --academy-navy: #112653;
+  --academy-text: #17233d;
   --academy-muted: #64748b;
-  --academy-border: #dce5f2;
-  --academy-surface: #ffffff;
-  --academy-soft: #f4f8ff;
-  --academy-radius: 20px;
-  --academy-shadow: 0 14px 38px rgba(15, 35, 75, 0.08);
-  --academy-shadow-hover: 0 22px 48px rgba(37, 99, 235, 0.16);
+  --academy-border: #dce6f5;
+  --academy-card: #f7faff;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
+/* Global typography */
 
 body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
-  color: var(--academy-text);
-  -webkit-font-smoothing: antialiased;
+}
+
+.md-content {
+  min-width: 0;
+}
+
+.md-content__inner {
+  margin-top: 0;
 }
 
 .md-typeset {
-  font-size: 0.82rem;
-  line-height: 1.8;
+  font-size: 0.76rem;
+  line-height: 1.65;
 }
 
 .md-typeset h1,
 .md-typeset h2,
-.md-typeset h3,
-.md-header__title {
-  font-weight: 750;
+.md-typeset h3 {
   letter-spacing: -0.035em;
+  font-weight: 750;
 }
 
-.md-typeset h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.7rem;
+/* Remove the documentation sidebar and excess margins
+   on the homepage only. Other documentation pages stay intact. */
+
+body:has(.academy-home) .md-sidebar--primary {
+  display: none;
 }
 
-.md-typeset a {
-  transition: color 180ms ease;
+body:has(.academy-home) .md-sidebar--secondary {
+  display: none;
 }
 
-/* ---------- 2. Header and navigation ---------- */
-
-.md-header {
-  background: linear-gradient(
-    105deg,
-    #0b1429 0%,
-    #142957 55%,
-    #214fc2 100%
-  );
-  box-shadow: 0 4px 20px rgba(8, 18, 42, 0.18);
+body:has(.academy-home) .md-main__inner {
+  max-width: none;
+  margin: 0;
 }
 
-.md-header__button,
-.md-header__topic,
-.md-header__title {
-  color: #ffffff;
+body:has(.academy-home) .md-grid {
+  max-width: none;
 }
 
-.md-tabs {
-  background: #0b1429;
+body:has(.academy-home) .md-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
-.md-tabs__link {
-  font-weight: 650;
-  opacity: 0.86;
+body:has(.academy-home) .md-content__inner {
+  margin: 0;
+  padding: 16px clamp(12px, 2.2vw, 32px) 24px;
 }
 
-.md-tabs__link:hover,
-.md-tabs__link--active {
-  color: #93c5fd;
-  opacity: 1;
+body:has(.academy-home) .md-content__inner::before,
+body:has(.academy-home) .md-content__inner::after {
+  display: none;
 }
 
-.md-search__input {
-  border-radius: 12px;
+.academy-home {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
-/* ---------- 3. Content width ---------- */
-
-.md-grid {
-  max-width: 1440px;
-}
-
-.md-content__inner {
-  padding-top: 1rem;
-}
-
-.md-typeset > :first-child {
-  margin-top: 0;
-}
-
-/* ---------- 4. Hero section ---------- */
+/* Hero layout */
 
 .academy-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
   align-items: center;
-  gap: clamp(28px, 4vw, 64px);
-  width: 100%;
-  min-height: 500px;
-  margin: 12px 0 48px;
-  padding: clamp(30px, 5vw, 68px);
+  gap: clamp(16px, 3vw, 38px);
+  min-height: 320px;
+  padding: clamp(24px, 3.5vw, 44px) clamp(24px, 5vw, 64px);
   overflow: hidden;
   isolation: isolate;
-  color: #ffffff;
+  color: #fff;
   background:
-    radial-gradient(
-      circle at 88% 15%,
-      rgba(14, 165, 233, 0.22),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 10% 100%,
-      rgba(37, 99, 235, 0.18),
-      transparent 38%
-    ),
-    linear-gradient(125deg, #0b1429 0%, #142957 58%, #1d4ed8 100%);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 28px;
-  box-shadow: 0 26px 70px rgba(10, 28, 67, 0.2);
-}
-
-.academy-hero::before,
-.academy-hero::after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 50%;
+    radial-gradient(circle at 78% 22%, rgba(56, 189, 248, 0.22), transparent 30%),
+    linear-gradient(118deg, #0b1530 0%, #142b5b 52%, #1d56c9 100%);
+  border: 1px solid rgba(125, 170, 255, 0.2);
+  border-radius: 22px;
+  box-shadow: 0 14px 36px rgba(15, 35, 80, 0.13);
 }
 
 .academy-hero::before {
-  top: -150px;
-  right: -90px;
-  width: 390px;
-  height: 390px;
-}
-
-.academy-hero::after {
-  right: 20%;
-  bottom: -230px;
-  width: 440px;
-  height: 440px;
+  position: absolute;
+  z-index: -1;
+  top: -170px;
+  right: -70px;
+  width: 350px;
+  height: 350px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
 }
 
 .academy-hero-content {
@@ -171,113 +126,109 @@ body {
 .academy-eyebrow {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 24px;
-  padding: 9px 16px;
-  color: #bfdbfe;
-  font-size: 0.72rem;
+  margin-bottom: 18px;
+  padding: 7px 12px;
+  color: #c4ddff;
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.09em;
   background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(191, 219, 254, 0.25);
+  border: 1px solid rgba(200, 220, 255, 0.25);
   border-radius: 999px;
 }
 
 .academy-hero h1 {
-  margin: 0 0 22px !important;
-  color: #ffffff !important;
-  font-size: clamp(2.4rem, 4.2vw, 4.5rem) !important;
+  margin: 0 0 14px !important;
+  color: #fff !important;
+  font-size: clamp(2rem, 3.7vw, 3.25rem) !important;
   font-weight: 850 !important;
   line-height: 1.04 !important;
   letter-spacing: -0.065em !important;
 }
 
 .academy-hero h1 span {
-  color: #93c5fd;
-  background: linear-gradient(90deg, #ffffff 0%, #93c5fd 70%, #67e8f9 100%);
+  color: #7dd3fc;
+  background: linear-gradient(90deg, #c7dcff, #54d7f3);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .academy-hero-description {
-  max-width: 570px;
-  margin: 0 0 28px !important;
-  color: #d5e1f5;
-  font-size: clamp(0.98rem, 1.3vw, 1.12rem);
-  line-height: 1.85;
+  max-width: 540px;
+  margin: 0 0 19px !important;
+  color: #d4def2;
+  font-size: clamp(0.82rem, 1.1vw, 0.98rem);
+  line-height: 1.7;
 }
 
-.academy-buttons,
-.academy-cta-buttons {
+/* Hero buttons */
+
+.academy-buttons {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin: 24px 0;
+  gap: 10px;
+  margin: 0 0 18px;
 }
 
-.md-typeset .academy-button {
+.academy-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 13px 20px;
-  color: #10203d !important;
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1.4;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 15px;
+  color: #10203e !important;
+  font-size: 0.76rem;
+  font-weight: 750;
   text-decoration: none !important;
-  background: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 11px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-  transition:
-    transform 200ms ease,
-    box-shadow 200ms ease,
-    background 200ms ease;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.md-typeset .academy-button:hover {
-  color: #10203d !important;
-  background: #eaf2ff;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-  transform: translateY(-3px);
+.academy-button:hover {
+  color: #10203e !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
-.md-typeset .academy-button-outline {
-  color: #ffffff !important;
+.academy-button-outline {
+  color: #fff !important;
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.32);
   box-shadow: none;
-  backdrop-filter: blur(10px);
 }
 
-.md-typeset .academy-button-outline:hover {
-  color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.17);
+.academy-button-outline:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.15);
 }
+
+/* Technology tags */
 
 .academy-tech-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 26px;
+  gap: 7px;
 }
 
 .academy-tech-pills span {
   display: inline-flex;
   align-items: center;
-  padding: 7px 12px;
-  color: #dce9ff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 9px;
+  color: #e0ecff;
+  font-size: 0.65rem;
+  font-weight: 650;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
 }
 
-/* ---------- 5. Hero image ---------- */
+/* Hero image */
 
 .academy-hero-visual {
   position: relative;
@@ -285,453 +236,353 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  min-height: 360px;
+  min-height: 240px;
 }
 
-.academy-hero-image,
+.academy-image-glow {
+  position: absolute;
+  inset: 12%;
+  background: #32b9ff;
+  border-radius: 50%;
+  opacity: 0.17;
+  filter: blur(55px);
+}
+
 .academy-engineer-image {
   position: relative;
   z-index: 1;
   display: block;
   width: 100%;
-  max-width: 500px;
-  max-height: 440px;
-  object-fit: cover;
+  max-width: 460px;
+  max-height: 300px;
+  object-fit: contain;
   object-position: center;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 22px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  border-radius: 14px;
+  filter: drop-shadow(0 15px 28px rgba(0, 0, 0, 0.22));
 }
 
-.academy-image-glow {
-  position: absolute;
-  inset: 12% 5%;
-  background: #38bdf8;
-  border-radius: 50%;
-  filter: blur(75px);
-  opacity: 0.22;
-}
+/* Floating topic labels */
 
 .tech-float {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  max-width: 82%;
-  padding: 12px 15px;
-  color: #ffffff;
-  background: rgba(12, 27, 55, 0.88);
-  border: 1px solid rgba(191, 219, 254, 0.28);
-  border-radius: 13px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  gap: 4px;
+  max-width: 200px;
+  padding: 10px 12px;
+  color: #fff;
+  background: rgba(11, 25, 53, 0.94);
+  border: 1px solid rgba(160, 195, 255, 0.28);
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(12px);
 }
 
 .tech-float strong {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
 }
 
 .tech-float small {
-  color: #c4d6f2;
-  font-size: 0.65rem;
+  color: #b8c8e2;
+  font-size: 0.61rem;
+  line-height: 1.4;
 }
 
 .tech-bigdata {
   top: 8%;
-  left: -4%;
-}
-
-.tech-cloud {
-  top: 34%;
-  right: -5%;
-}
-
-.tech-devops {
-  right: -3%;
-  bottom: 19%;
-}
-
-.tech-python {
-  bottom: 4%;
   left: 0;
 }
 
-/* ---------- 6. General landing-page sections ---------- */
+.tech-cloud {
+  top: 43%;
+  right: -1%;
+}
 
-.academy-section,
-.academy-process,
-.academy-final-cta {
-  margin: 64px 0;
+.tech-devops {
+  bottom: 5%;
+  left: 8%;
+}
+
+/* Explore Learning section */
+
+.academy-section {
+  padding: 24px 0 4px;
 }
 
 .academy-section-heading {
-  max-width: 760px;
-  margin: 0 auto 30px;
+  margin: 0 0 18px;
   text-align: center;
 }
 
 .academy-section-heading h2 {
-  margin: 0 0 10px !important;
+  margin: 0 0 5px !important;
   color: var(--academy-text);
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
-  line-height: 1.2;
-  letter-spacing: -0.045em;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem) !important;
+  line-height: 1.25 !important;
 }
 
 .academy-section-heading p {
-  margin: 0;
-  color: var(--academy-muted);
-  font-size: 0.98rem;
-}
-
-/* ---------- 7. Learning cards ---------- */
-
-.academy-course-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.md-typeset .academy-course-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  min-height: 240px;
-  padding: 26px;
-  color: var(--academy-text) !important;
-  text-decoration: none !important;
-  background: linear-gradient(160deg, #ffffff, #f9fbff);
-  border: 1px solid var(--academy-border);
-  border-radius: var(--academy-radius);
-  box-shadow: 0 7px 22px rgba(15, 35, 75, 0.045);
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease;
-}
-
-.md-typeset .academy-course-card:hover {
-  color: var(--academy-text) !important;
-  border-color: #93b9ff;
-  box-shadow: var(--academy-shadow-hover);
-  transform: translateY(-6px);
-}
-
-.academy-card-icon {
-  display: grid;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 17px;
-  place-items: center;
-  font-size: 1.55rem;
-  background: linear-gradient(135deg, #eaf2ff, #dce9ff);
-  border: 1px solid #d5e5ff;
-  border-radius: 15px;
-}
-
-.md-typeset .academy-course-card h3 {
-  margin: 0 0 12px;
-  color: #111b31;
-  font-size: 1.14rem;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
-}
-
-.md-typeset .academy-course-card p {
-  margin: 0 0 18px;
-  color: var(--academy-muted);
-  font-size: 0.83rem;
-  line-height: 1.8;
-}
-
-.academy-course-card span {
-  margin-top: auto;
-  color: var(--academy-blue);
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-/* ---------- 8. Learning process ---------- */
-
-.academy-process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.academy-process-card {
-  padding: 25px 20px;
-  text-align: center;
-  background: #ffffff;
-  border: 1px solid var(--academy-border);
-  border-radius: 17px;
-  box-shadow: 0 8px 25px rgba(15, 35, 75, 0.04);
-}
-
-.academy-process-card strong {
-  color: var(--academy-blue);
-  font-size: 2rem;
-  font-weight: 850;
-}
-
-.academy-process-card h3 {
-  margin: 12px 0 7px;
-  font-size: 1rem;
-}
-
-.academy-process-card p {
-  margin: 0;
+  margin: 0 auto !important;
   color: var(--academy-muted);
   font-size: 0.8rem;
 }
 
-.academy-process-arrow {
-  display: none;
+/* Compact three-column learning cards */
+
+.academy-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
 }
 
-/* ---------- 9. Final call to action ---------- */
-
-.academy-final-cta {
+.academy-course-card {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: clamp(28px, 5vw, 54px);
-  color: #ffffff;
-  background:
-    radial-gradient(circle at 90% 10%, rgba(6, 182, 212, 0.2), transparent 32%),
-    linear-gradient(125deg, #0b1429, #1d4ed8);
-  border-radius: 24px;
-  box-shadow: var(--academy-shadow);
-}
-
-.academy-final-cta h2 {
-  margin: 0 0 12px !important;
-  color: #ffffff !important;
-  font-size: clamp(1.65rem, 3vw, 2.4rem);
-  line-height: 1.2;
-}
-
-.academy-final-cta p {
-  max-width: 590px;
-  margin: 0;
-  color: #d6e4fa;
-}
-
-.academy-final-cta .academy-cta-buttons {
-  flex-shrink: 0;
-  margin: 0;
-}
-
-/* ---------- 10. Hide documentation-only elements on homepage ---------- */
-
-/* MkDocs Material assigns the homepage the .home class in many versions.
-   These rules are scoped to the homepage and custom landing sections. */
-
-body.home .md-content__button,
-body.home .md-typeset .headerlink {
-  opacity: 0.45;
-}
-
-.academy-hero + .academy-section {
-  margin-top: 40px;
-}
-
-/* ---------- 11. Content images and code blocks ---------- */
-
-.md-typeset img:not(.academy-hero-image):not(.academy-engineer-image) {
-  border-radius: 12px;
-}
-
-.md-typeset pre {
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 150px;
+  padding: 16px;
+  color: var(--academy-text) !important;
+  text-decoration: none !important;
+  background: linear-gradient(145deg, #ffffff 0%, #f3f7ff 100%);
   border: 1px solid var(--academy-border);
   border-radius: 13px;
+  box-shadow: 0 4px 14px rgba(24, 55, 110, 0.035);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.md-typeset table:not([class]) {
-  display: block;
-  overflow-x: auto;
-  border: 1px solid var(--academy-border);
-  border-radius: 12px;
+.academy-course-card:hover {
+  color: var(--academy-text) !important;
+  transform: translateY(-3px);
+  border-color: #8bb8ff;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.11);
 }
 
-.md-typeset table:not([class]) th {
-  background: #edf4ff;
+.academy-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  margin-bottom: 9px;
+  font-size: 1.2rem;
+  background: linear-gradient(145deg, #e8f1ff, #d9e8ff);
+  border: 1px solid #d3e3ff;
+  border-radius: 10px;
 }
 
-/* ---------- 12. Tablet layout ---------- */
+.academy-course-card h3 {
+  margin: 0 0 5px !important;
+  color: #10203e !important;
+  font-size: 0.93rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+}
 
-@media screen and (max-width: 1000px) {
+.academy-course-card p {
+  margin: 0 0 10px !important;
+  color: #5c6d88;
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.academy-card-link {
+  margin-top: auto;
+  color: var(--academy-primary);
+  font-size: 0.7rem;
+  font-weight: 750;
+}
+
+/* Keep images and cards within their containers */
+
+.academy-home img {
+  max-width: 100%;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 900px) {
+  body:has(.academy-home) .md-content__inner {
+    padding: 14px 16px 22px;
+  }
+
   .academy-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
-    gap: 24px;
-    min-height: 420px;
-    padding: 30px;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+    gap: 18px;
+    min-height: 280px;
+    padding: 26px;
   }
 
   .academy-hero h1 {
-    font-size: clamp(2.1rem, 5vw, 3.3rem) !important;
+    font-size: clamp(1.8rem, 4vw, 2.5rem) !important;
   }
 
   .academy-hero-visual {
-    min-height: 300px;
+    min-height: 210px;
+  }
+
+  .academy-engineer-image {
+    max-height: 245px;
   }
 
   .tech-float {
-    padding: 9px 11px;
+    padding: 8px 9px;
   }
 
   .academy-course-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
-  .academy-final-cta {
-    align-items: flex-start;
-    flex-direction: column;
+  .academy-course-card {
+    padding: 13px;
   }
 }
 
-/* ---------- 13. Mobile layout ---------- */
+/* Mobile */
 
-@media screen and (max-width: 650px) {
-  .md-content__inner {
-    padding: 0.7rem;
+@media screen and (max-width: 600px) {
+  body:has(.academy-home) .md-content__inner {
+    padding: 10px 10px 18px;
   }
 
   .academy-hero {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-    min-height: 0;
-    margin: 6px 0 36px;
-    padding: 28px 22px;
-    border-radius: 21px;
-  }
-
-  .academy-hero-content {
-    order: 1;
-  }
-
-  .academy-hero-visual {
-    order: 2;
-    min-height: 0;
-    padding: 8px 8px 22px;
-  }
-
-  .academy-hero-image,
-  .academy-engineer-image {
-    max-width: 100%;
-    max-height: 340px;
+    gap: 12px;
+    min-height: auto;
+    padding: 23px 18px 18px;
     border-radius: 16px;
   }
 
+  .academy-eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.61rem;
+  }
+
   .academy-hero h1 {
-    font-size: clamp(2.35rem, 11vw, 3.4rem) !important;
-    line-height: 1.04 !important;
+    font-size: clamp(2rem, 8vw, 2.65rem) !important;
   }
 
   .academy-hero-description {
-    font-size: 0.95rem;
+    margin-bottom: 15px !important;
+    font-size: 0.82rem;
   }
 
   .academy-buttons {
-    align-items: stretch;
-    flex-direction: column;
+    gap: 8px;
   }
 
-  .md-typeset .academy-button {
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
+  .academy-button {
+    min-height: 38px;
+    padding: 9px 11px;
+    font-size: 0.7rem;
   }
 
   .academy-tech-pills {
-    gap: 7px;
+    gap: 6px;
   }
 
   .academy-tech-pills span {
-    padding: 6px 9px;
-    font-size: 0.67rem;
+    padding: 4px 7px;
+    font-size: 0.6rem;
+  }
+
+  .academy-hero-visual {
+    min-height: 190px;
+    margin-top: 2px;
+  }
+
+  .academy-engineer-image {
+    max-height: 220px;
   }
 
   .tech-float {
-    display: none;
+    max-width: 145px;
+    padding: 7px 8px;
   }
 
-  .academy-section,
-  .academy-process,
-  .academy-final-cta {
-    margin: 42px 0;
+  .tech-float strong {
+    font-size: 0.65rem;
+  }
+
+  .tech-float small {
+    font-size: 0.54rem;
+  }
+
+  .tech-bigdata {
+    top: 0;
+    left: 0;
+  }
+
+  .tech-cloud {
+    top: 40%;
+    right: 0;
+  }
+
+  .tech-devops {
+    bottom: 0;
+    left: 3%;
+  }
+
+  .academy-section {
+    padding-top: 22px;
   }
 
   .academy-section-heading {
-    margin-bottom: 22px;
-    text-align: left;
+    margin-bottom: 13px;
+  }
+
+  .academy-section-heading h2 {
+    font-size: 1.45rem !important;
+  }
+
+  .academy-section-heading p {
+    font-size: 0.72rem;
   }
 
   .academy-course-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
-  }
-
-  .md-typeset .academy-course-card {
-    min-height: 0;
-    padding: 22px;
-  }
-
-  .academy-process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 9px;
   }
 
-  .academy-process-card {
-    padding: 20px 14px;
+  .academy-course-card {
+    min-height: 145px;
+    padding: 12px;
+    border-radius: 11px;
   }
 
-  .academy-final-cta {
-    padding: 27px 22px;
-    border-radius: 19px;
+  .academy-card-icon {
+    width: 33px;
+    height: 33px;
+    font-size: 1.05rem;
   }
 
-  .academy-final-cta .academy-cta-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-/* ---------- 14. Small phones ---------- */
-
-@media screen and (max-width: 380px) {
-  .academy-hero {
-    padding: 23px 17px;
+  .academy-course-card h3 {
+    font-size: 0.83rem !important;
   }
 
-  .academy-process-grid {
-    grid-template-columns: minmax(0, 1fr);
+  .academy-course-card p {
+    font-size: 0.67rem;
   }
 
-  .academy-tech-pills span {
-    font-size: 0.62rem;
+  .academy-card-link {
+    font-size: 0.65rem;
   }
 }
 
-/* ---------- 15. Accessibility and motion ---------- */
-
-:focus-visible {
-  outline: 3px solid #38bdf8;
-  outline-offset: 3px;
-}
+/* Accessibility: respect reduced-motion preferences */
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  .academy-button,
+  .academy-course-card {
+    transition: none;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .academy-button:hover,
+  .academy-course-card:hover {
+    transform: none;
   }
 }
