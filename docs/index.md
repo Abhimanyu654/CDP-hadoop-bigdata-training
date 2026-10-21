@@ -55,21 +55,6 @@ hide:
         class="academy-engineer-image"
       />
 
-      <div class="tech-float tech-bigdata">
-        <strong>📊 Big Data</strong>
-        <small>Hadoop · Spark · Kafka</small>
-      </div>
-
-      <div class="tech-float tech-cloud">
-        <strong>☁️ Cloud</strong>
-        <small>AWS · Azure · GCP</small>
-      </div>
-
-      <div class="tech-float tech-devops">
-        <strong>⚙️ DevOps</strong>
-        <small>CI/CD · Kubernetes</small>
-      </div>
-
     </div>
 
   </section>
