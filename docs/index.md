@@ -49,7 +49,7 @@ hide:
     <div class="academy-image-glow"></div>
 
     <img
-      src="assets/hero-engineer.png"
+      src="images/academy-hero-image.png"
       alt="Technology engineer working on a laptop"
       class="academy-engineer-image"
     >
