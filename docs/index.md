@@ -84,21 +84,21 @@ hide:
         <span class="academy-card-link">Explore Cloud →</span>
       </a>
 
-      <a href="00-learning-roadmap/" class="academy-course-card">
+      <a href="coming-soon/devops/" class="academy-course-card">
         <div class="academy-card-icon">⚙️</div>
         <h3>DevOps Engineering</h3>
         <p>Git, CI/CD, Docker, Kubernetes and Terraform.</p>
         <span class="academy-card-link">Explore DevOps →</span>
       </a>
 
-      <a href="00-learning-roadmap/" class="academy-course-card">
+      <a href="coming-soon/python/" class="academy-course-card">
         <div class="academy-card-icon">🐍</div>
         <h3>Python & Automation</h3>
         <p>Python scripting, data processing and automation.</p>
         <span class="academy-card-link">Explore Python →</span>
       </a>
 
-      <a href="00-learning-roadmap/" class="academy-course-card">
+      <a href="coming-soon/monitoring/" class="academy-course-card">
         <div class="academy-card-icon">📊</div>
         <h3>Monitoring</h3>
         <p>Metrics, alerting, capacity planning and observability.</p>
