@@ -77,7 +77,7 @@ hide:
         <span class="academy-card-link">Explore Big Data →</span>
       </a>
 
-      <a href="00-learning-roadmap/" class="academy-course-card">
+      <a href="coming-soon/cloud/" class="academy-course-card">
         <div class="academy-card-icon">☁️</div>
         <h3>Cloud Engineering</h3>
         <p>AWS, cloud networking, infrastructure and architecture.</p>
