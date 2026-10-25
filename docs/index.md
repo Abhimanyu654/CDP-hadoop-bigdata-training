@@ -70,7 +70,7 @@ hide:
 
     <div class="academy-course-grid">
 
-      <a href="01-hdfs/" class="academy-course-card">
+      <a href="big-data/" class="academy-course-card">
         <div class="academy-card-icon">🐘</div>
         <h3>Big Data</h3>
         <p>Hadoop, HDFS, YARN, Spark, Hive, Impala and Kafka.</p>
