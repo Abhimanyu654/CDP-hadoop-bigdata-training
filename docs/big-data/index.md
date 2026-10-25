@@ -6,138 +6,241 @@ hide:
   - path
 ---
 
-<div class="bigdata-hero">
-  <div class="bigdata-eyebrow">SKILLFORGETECH LEARNING PATH</div>
-  <h1>Big Data Engineering</h1>
-  <p>From your first Hadoop concept to production-level Big Data engineering. Learn the architecture, understand the components, and practise real-world troubleshooting.</p>
-  <div class="bigdata-stats">
-    <span>Beginner to Advanced</span>
-    <span>Practical Labs</span>
-    <span>Production Skills</span>
-  </div>
-</div>
+<div class="bd-dashboard">
 
-## Start Your Learning Journey
+  <section class="bd-hero">
+    <div class="bd-hero-content">
+      <span class="bd-eyebrow">YOUR BIG DATA LEARNING PATH</span>
+      <h1>Master Big Data from <span>fundamentals to production</span></h1>
+      <p class="bd-hero-description">
+        Learn Hadoop, Spark and modern data platforms through architecture,
+        practical exercises, production troubleshooting and interview preparation.
+      </p>
 
-Follow the recommended roadmap or jump directly into a technology you want to explore.
+      <div class="bd-feature-list">
+        <span>▶ Animated lessons</span>
+        <span>♫ Voice explanations</span>
+        <span>⚗ Hands-on labs</span>
+      </div>
 
-<div class="bigdata-grid">
+      <a class="bd-primary-button" href="../00-learning-roadmap.md">
+        Start Learning <span>→</span>
+      </a>
+    </div>
 
-  <a class="bigdata-card" href="../00-learning-roadmap.md">
-    <div class="bigdata-icon">🗺️</div>
-    <h3>Learning Roadmap</h3>
-    <p>Understand the learning sequence and how Big Data components work together.</p>
-    <span>Start Learning →</span>
-  </a>
+    <div class="bd-hero-visual" aria-hidden="true">
+      <div class="bd-orbit bd-orbit-one"></div>
+      <div class="bd-orbit bd-orbit-two"></div>
+      <div class="bd-data-art">
+        <div class="bd-server bd-server-one">HDFS</div>
+        <div class="bd-server bd-server-two">SPARK</div>
+        <div class="bd-server bd-server-three">KAFKA</div>
+        <div class="bd-data-core">🐘</div>
+        <div class="bd-data-caption">DISTRIBUTED DATA PLATFORM</div>
+      </div>
+      <div class="bd-hero-stat">
+        <strong>12+</strong>
+        <span>Technology paths</span>
+      </div>
+    </div>
+  </section>
 
-  <a class="bigdata-card" href="../01-hdfs/">
-    <div class="bigdata-icon">🗄️</div>
-    <h3>HDFS</h3>
-    <p>Distributed storage, NameNode, DataNode, replication, reads and writes.</p>
-    <span>Explore HDFS →</span>
-  </a>
+  <section class="bd-section" id="technologies">
+    <div class="bd-section-heading">
+      <div>
+        <span class="bd-section-kicker">EXPLORE • LEARN • BUILD</span>
+        <h2>Explore Technologies</h2>
+        <p>Choose a technology to explore its concepts, architecture and labs.</p>
+      </div>
+      <a class="bd-text-link" href="../00-learning-roadmap.md">
+        View Learning Roadmap →
+      </a>
+    </div>
 
-  <a class="bigdata-card" href="../02-yarn/">
-    <div class="bigdata-icon">⚙️</div>
-    <h3>YARN</h3>
-    <p>ResourceManager, NodeManager, containers, queues and resource allocation.</p>
-    <span>Explore YARN →</span>
-  </a>
+    <div class="bd-tech-grid">
 
-  <a class="bigdata-card" href="../03-mapreduce-jobhistory/">
-    <div class="bigdata-icon">🔄</div>
-    <h3>MapReduce</h3>
-    <p>Map, shuffle, reduce, job execution and JobHistory Server.</p>
-    <span>Explore MapReduce →</span>
-  </a>
+      <a class="bd-tech-card bd-teal" href="../01-hdfs/">
+        <span class="bd-tech-icon">🐘</span>
+        <span class="bd-tech-info">
+          <strong>HDFS</strong>
+          <small>Blocks, NameNode, DataNode and replication</small>
+          <b>Explore HDFS →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../04-spark/">
-    <div class="bigdata-icon">⚡</div>
-    <h3>Apache Spark</h3>
-    <p>Drivers, executors, jobs, stages, tasks, memory and performance tuning.</p>
-    <span>Explore Spark →</span>
-  </a>
+      <a class="bd-tech-card bd-green" href="../02-yarn/">
+        <span class="bd-tech-icon">🔗</span>
+        <span class="bd-tech-info">
+          <strong>YARN</strong>
+          <small>ResourceManager, containers and scheduling</small>
+          <b>Explore YARN →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../05-spark-on-yarn/">
-    <div class="bigdata-icon">🚀</div>
-    <h3>Spark on YARN</h3>
-    <p>Client and cluster modes, application deployment and Spark History Server.</p>
-    <span>Explore Spark on YARN →</span>
-  </a>
+      <a class="bd-tech-card bd-orange" href="../04-spark/">
+        <span class="bd-tech-icon">⚡</span>
+        <span class="bd-tech-info">
+          <strong>Apache Spark</strong>
+          <small>Drivers, executors, stages and tuning</small>
+          <b>Explore Spark →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../06-hive/">
-    <div class="bigdata-icon">🐝</div>
-    <h3>Hive</h3>
-    <p>Metastore, HiveServer2, tables, partitions and query execution.</p>
-    <span>Explore Hive →</span>
-  </a>
+      <a class="bd-tech-card bd-amber" href="../06-hive/">
+        <span class="bd-tech-icon">▤</span>
+        <span class="bd-tech-info">
+          <strong>Hive</strong>
+          <small>SQL, tables, partitions and optimization</small>
+          <b>Explore Hive →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../07-tez/">
-    <div class="bigdata-icon">🔀</div>
-    <h3>Tez</h3>
-    <p>Directed acyclic graphs, application masters and query execution.</p>
-    <span>Explore Tez →</span>
-  </a>
+      <a class="bd-tech-card bd-purple" href="../08-impala/">
+        <span class="bd-tech-icon">▥</span>
+        <span class="bd-tech-info">
+          <strong>Impala</strong>
+          <small>MPP queries, Parquet and performance</small>
+          <b>Explore Impala →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../08-impala/">
-    <div class="bigdata-icon">📊</div>
-    <h3>Impala</h3>
-    <p>Impala daemons, coordinators, catalog management and SQL performance.</p>
-    <span>Explore Impala →</span>
-  </a>
+      <a class="bd-tech-card bd-red" href="../13-kafka/">
+        <span class="bd-tech-icon">⌘</span>
+        <span class="bd-tech-info">
+          <strong>Kafka</strong>
+          <small>Topics, partitions, brokers and consumers</small>
+          <b>Explore Kafka →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../09-kerberos/">
-    <div class="bigdata-icon">🔐</div>
-    <h3>Kerberos</h3>
-    <p>Principals, tickets, keytabs, authentication and common failures.</p>
-    <span>Explore Kerberos →</span>
-  </a>
+      <a class="bd-tech-card bd-green" href="../12-zookeeper/">
+        <span class="bd-tech-icon">◎</span>
+        <span class="bd-tech-info">
+          <strong>ZooKeeper</strong>
+          <small>Quorums, coordination and znodes</small>
+          <b>Explore ZooKeeper →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../10-ranger-kms-rms/">
-    <div class="bigdata-icon">🛡️</div>
-    <h3>Ranger & KMS</h3>
-    <p>Authorization policies, auditing, encryption and key management.</p>
-    <span>Explore Security →</span>
-  </a>
+      <a class="bd-tech-card bd-blue" href="../10-ranger-kms-rms/">
+        <span class="bd-tech-icon">🛡️</span>
+        <span class="bd-tech-info">
+          <strong>Ranger & KMS</strong>
+          <small>Policies, authorization and encryption</small>
+          <b>Explore Security →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../11-atlas/">
-    <div class="bigdata-icon">🧬</div>
-    <h3>Atlas</h3>
-    <p>Metadata, data lineage, classifications and governance.</p>
-    <span>Explore Atlas →</span>
-  </a>
+      <a class="bd-tech-card bd-orange" href="../11-atlas/">
+        <span class="bd-tech-icon">◈</span>
+        <span class="bd-tech-info">
+          <strong>Atlas</strong>
+          <small>Metadata, lineage and governance</small>
+          <b>Explore Atlas →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../12-zookeeper/">
-    <div class="bigdata-icon">🔗</div>
-    <h3>ZooKeeper</h3>
-    <p>Quorums, coordination, service dependencies and failure scenarios.</p>
-    <span>Explore ZooKeeper →</span>
-  </a>
+      <a class="bd-tech-card bd-purple" href="../15-supporting-services/">
+        <span class="bd-tech-icon">▦</span>
+        <span class="bd-tech-info">
+          <strong>Oozie & Services</strong>
+          <small>Workflows and supporting components</small>
+          <b>Explore Services →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../13-kafka/">
-    <div class="bigdata-icon">📨</div>
-    <h3>Kafka</h3>
-    <p>Brokers, topics, partitions, replicas, ISR and KRaft.</p>
-    <span>Explore Kafka →</span>
-  </a>
+      <a class="bd-tech-card bd-teal" href="../15-supporting-services/">
+        <span class="bd-tech-icon">⇄</span>
+        <span class="bd-tech-info">
+          <strong>NiFi</strong>
+          <small>Dataflows, processors and routing</small>
+          <b>Explore Services →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../14-production-troubleshooting/">
-    <div class="bigdata-icon">🧪</div>
-    <h3>Production Troubleshooting</h3>
-    <p>Diagnose disk-full incidents, failed DataNodes, stuck YARN jobs and authentication errors.</p>
-    <span>Explore Production Labs →</span>
-  </a>
+      <a class="bd-tech-card bd-red" href="../15-supporting-services/">
+        <span class="bd-tech-icon">▤</span>
+        <span class="bd-tech-info">
+          <strong>HBase</strong>
+          <small>Column families, regions and reads/writes</small>
+          <b>Explore Services →</b>
+        </span>
+      </a>
 
-  <a class="bigdata-card" href="../15-supporting-services/">
-    <div class="bigdata-icon">🧰</div>
-    <h3>Supporting Services</h3>
-    <p>Explore the additional components that support a production data platform.</p>
-    <span>Explore Services →</span>
-  </a>
+    </div>
+  </section>
 
-</div>
+  <section class="bd-section bd-labs-section" id="labs">
+    <div class="bd-section-heading">
+      <div>
+        <span class="bd-section-kicker">PRACTISE REAL-WORLD SCENARIOS</span>
+        <h2>Production Labs</h2>
+        <p>Understand what happens behind the scenes in a real cluster.</p>
+      </div>
+      <a class="bd-text-link" href="../14-production-troubleshooting/">
+        View All Labs →
+      </a>
+    </div>
 
-<div class="bigdata-note">
-  <strong>Learn it. Build it. Troubleshoot it.</strong>
-  <p>Every learning path will progressively introduce concepts, architecture, configuration, hands-on exercises and realistic production scenarios.</p>
+    <div class="bd-lab-grid">
+
+      <article class="bd-lab-card bd-lab-hdfs">
+        <span class="bd-lab-label">HDFS LAB</span>
+        <h3>HDFS Read/Write</h3>
+        <p>Follow file upload, block placement, replication and read flow.</p>
+        <div class="bd-mini-flow">
+          <span>Client</span><i>↓</i>
+          <span>NameNode</span><i>↓</i>
+          <div class="bd-node-row">
+            <span>DN 1</span><span>DN 2</span><span>DN 3</span>
+          </div>
+        </div>
+        <a class="bd-lab-button" href="../01-hdfs/hdfs-read-architecture.md">
+          Explore HDFS Lab →
+        </a>
+      </article>
+
+      <article class="bd-lab-card bd-lab-yarn">
+        <span class="bd-lab-label">YARN LAB</span>
+        <h3>Container Execution</h3>
+        <p>Learn how applications request resources and run in containers.</p>
+        <div class="bd-mini-flow">
+          <span>ResourceManager</span><i>↓</i>
+          <span>ApplicationMaster</span><i>↓</i>
+          <div class="bd-node-row">
+            <span>Container 1</span><span>Container 2</span>
+          </div>
+        </div>
+        <a class="bd-lab-button" href="../02-yarn/application-master-container.md">
+          Explore YARN Lab →
+        </a>
+      </article>
+
+      <article class="bd-lab-card bd-lab-spark">
+        <span class="bd-lab-label">SPARK LAB</span>
+        <h3>Performance Tuning</h3>
+        <p>Understand drivers, executors, stages, tasks and memory usage.</p>
+        <div class="bd-spark-visual" aria-hidden="true">
+          <span>Driver</span><i>→</i><span>Executors</span>
+          <div class="bd-spark-bars"><b></b><b></b><b></b><b></b><b></b></div>
+        </div>
+        <a class="bd-lab-button" href="../04-spark/">
+          Explore Spark →
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <nav class="bd-learning-path" aria-label="Big Data learning path">
+    <strong>🗺 Learning Path</strong>
+    <a href="../00-learning-roadmap.md"><span>1</span> Fundamentals</a>
+    <i>→</i>
+    <a href="../00-service-dependency-map.md"><span>2</span> Architecture</a>
+    <i>→</i>
+    <a href="#labs"><span>3</span> Labs</a>
+    <i>→</i>
+    <a href="../14-production-troubleshooting/"><span>4</span> Troubleshooting</a>
+  </nav>
+
 </div>
